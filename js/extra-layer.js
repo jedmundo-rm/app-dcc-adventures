@@ -95,31 +95,6 @@
                 });
 
 
-        let timer;
-        const tiempoEspera = 20000; // Tiempo en milisegundos (5 min)
-
-        $(document).on('mousemove', function() {
-            // 1. Si el ratón se mueve, limpiamos el temporizador anterior
-            clearTimeout(timer);
-
-            // 2. Opcional: Si habías ocultado algo al detenerse, aquí puedes mostrarlo
-            // console.log("El ratón se está moviendo...");
-
-            // 3. Iniciamos la cuenta regresiva de nuevo
-            timer = setTimeout(function() {
-                // --- ESTA ES LA ACCIÓN CUANDO SE DETIENE ---
-                ejecutarAccion();
-            }, tiempoEspera);
-        });
-
-        function ejecutarAccion() {
-            console.log("El ratón se detuvo por " + (tiempoEspera / 300000) + " segundos.");
-            // Aquí puedes ocultar controles de video, mostrar un mensaje, etc.
-
-      
-        }
-
-
                 // =========================
                 // ABRIR EXTRA LAYER
                 // =========================
