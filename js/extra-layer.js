@@ -114,11 +114,12 @@
 
                     TweenMax.to("#extra-layer", 1, {
                         bottom: "0",
+                        // autoAlpha: 1 ,
                         ease: Power3.easeOut,
-
+                       
                         onComplete() {
 
-
+          
                         }
                     });
 
@@ -224,6 +225,7 @@
 
                     TweenMax.to("#extra-layer", 1, {
                         bottom: "-100%",
+                        // autoAlpha: 0 ,
                         ease: Power3.easeOut,
 
                         onComplete() {
@@ -232,27 +234,7 @@
                                 left: "-150px",
                                 ease: Expo.easeOut
                             });
-                            TweenMax.to($(".page-catatonic"), 1.4, { 
-                                autoAlpha: 1 
-                            });
-                            TweenMax.to($(".page-veranos"), 1.4, { 
-                                autoAlpha: 1 
-                            });
-                            TweenMax.to($(".page-river"), 1.4, { 
-                                autoAlpha: 1 
-                            });
-                            TweenMax.to($(".page-marina"), 1.4, { 
-                                autoAlpha: 1 
-                            });
-                            TweenMax.to($(".page-vista"), 1.4, { 
-                                autoAlpha: 1 
-                            });
-                            TweenMax.to($(".page-pirates"), 1.4, { 
-                                autoAlpha: 1 
-                            });
-                            TweenMax.to($(".page-paddle"), 1.4, { 
-                                autoAlpha: 1 
-                            });
+
                         }
                     });
                     
