@@ -1,0 +1,263 @@
+
+
+body { 
+    -webkit-user-select: none;
+    background-image: url("../images/home/Bkg.jpg"); 
+    background-size: auto;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    // esta es la resolucion que vamos a usar
+    @media(min-width: 1367px){
+        background-size: cover;
+    }
+}
+
+@mixin aplicarTransicion($duracion: 0s, $retraso: 0s) {
+    -webkit-transition: $duracion ease-in;
+    -moz-transition: $duracion ease-in;
+    -o-transition: $duracion ease-in;
+    transition: $duracion ease-in;
+    -webkit-transform: all;
+    -moz-transform: all;
+    -o-transform: all;
+    -ms-transform: all;
+    transform: all;
+    transition-delay: $retraso;
+}
+
+#screen{
+
+    @include aplicarTransicion(0.7s, 0s);
+
+    position: absolute;
+    z-index: 2;
+    height: 40%;
+    bottom: -200px;
+    width: 100%;
+
+    // esta es la resolucion que vamos a usar
+    @media(min-width: 1367px){
+        height: 34%
+    }
+
+    &.active{
+        height: 100%;
+        bottom: 0px !important;
+        .screen-wrapper{
+            align-items: center;
+            border-radius: 0;
+
+            img#logo{
+                margin-top: 0;
+                width: auto;
+            }
+        }
+    }
+
+    .screen-wrapper{
+        
+        @include aplicarTransicion(0.5s, 0s);
+
+        background: #B6A06F;
+        background: linear-gradient(241deg, rgba(182, 160, 111, 1) 0%, rgba(188, 167, 122, 1) 45%, rgba(203, 189, 154, 1) 100%);
+
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        transform: scaleX(1.5);
+        position: absolute;
+        margin: 0 auto;
+
+        img#logo{
+            margin-top: 2rem;
+            transform: scaleX(0.7);
+            width: 24%;
+
+            // esta es la resolucion que vamos a usar
+            @media(min-width: 1367px){
+
+            }
+        }
+
+    }
+}
+
+#home{
+    position: absolute;
+    bottom: -100%;
+    height: 100%;
+    width: 100%;
+    left: 0;
+
+    padding: 8rem 10rem;
+
+    // esta es la resolucion que vamos a usar
+    @media(min-width: 1367px){
+        padding: 8rem 20rem;
+    }
+
+    .row{
+        text-align: center;
+
+        img{
+            width: 100%;
+    
+        }   
+
+    }
+}
+
+
+#extra-layer {
+  position: absolute;
+  z-index: 260000;
+  bottom: -100%;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+
+
+  button.extra-close-btn {
+      border: 1px solid transparent;
+      background: transparent;
+      position: absolute;
+      z-index: 5000;
+      left: -150px;
+      width: 135px;
+      top: 36px;
+      cursor: pointer;
+
+      &:focus { 
+        outline: 0 solid blue; 
+    }
+
+      img { 
+        width: 100%; 
+        float: left; 
+    }
+  }
+
+
+  .page {
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 0rem 10rem;
+    
+    // esta es la resolucion que vamos a usar
+    @media(min-width: 1367px){
+        padding: 2rem 9rem;
+    }
+  }
+}
+
+.row{
+    &.thumbs-wrapper{
+        .thumb{
+            &.tercera-fila{
+                img{
+                    padding: 0 2.2rem;
+                    // esta es la resolucion que vamos a usar
+                    @media(min-width: 1367px){
+                        padding: 0 4.4rem;
+                    } 
+                }
+            }
+            img{
+                width: 100%;
+                    
+                // esta es la resolucion que vamos a usar
+                @media(min-width: 1367px){
+                    width: auto;
+                }            
+            }
+        }        
+    }
+}
+
+// --- Clases Compartidas (Extra Sections) ---
+.page-veranos, .page-pirates, .page-paddle, .page-tb, .page-adventures {
+  overflow: scroll;
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 40px;
+}
+
+.page-veranos{
+    .thumbs-wrapper{
+        padding: 4rem 6rem;
+        // esta es la resolucion que vamos a usar
+        @media(min-width: 1367px){
+            padding: 14rem 20rem;
+        } 
+    }        
+}
+
+.page-pirates{
+    .thumbs-wrapper{
+        padding: 4rem 6rem;
+        // esta es la resolucion que vamos a usar
+        @media(min-width: 1367px){
+            padding: 14rem 20rem;
+        } 
+    }        
+}
+
+.page-paddle{
+    .thumbs-wrapper{
+        padding: 4rem 6rem;
+        // esta es la resolucion que vamos a usar
+        @media(min-width: 1367px){
+            padding: 14rem 20rem;
+        } 
+    }        
+}
+
+.page-tb{
+    .thumbs-wrapper{
+        .ultima-fila{
+            padding: 0rem 4rem;
+            // esta es la resolucion que vamos a usar
+            @media(min-width: 1367px){
+                padding: 0;
+            } 
+        }
+
+    }   
+}
+
+.page-adventures{
+    .thumbs-wrapper{
+        .ultima-fila{
+            padding: 0rem 31rem;
+            // esta es la resolucion que vamos a usar
+            @media(min-width: 1367px){
+                padding: 0;
+            } 
+        }
+
+    }   
+}
+
+.no-visible-cm { display: none !important; }
+
+.scroll{
+    -webkit-overflow-scrolling: touch;
+}
