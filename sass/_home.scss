@@ -122,23 +122,31 @@ body {
   font-weight: 300;
 
 
-  button.extra-close-btn {
-      border: 1px solid transparent;
-      background: transparent;
-      position: absolute;
-      z-index: 5000;
-      left: -150px;
-      width: 135px;
-      top: 36px;
-      cursor: pointer;
+  button{
 
-      &:focus { 
-        outline: 0 solid blue; 
-    }
+    border: 1px solid transparent;
+    background: transparent;
+    position: absolute;
+    z-index: 5000;
+    width: 135px;
+    cursor: pointer;
 
-      img { 
+    img { 
         width: 100%; 
         float: left; 
+    }
+
+    &.extra-close-btn {
+        left: -150px;
+        top: 36px;     
+    }
+    &.extra-back-btn{
+        right: 154px;
+        top: 36px;
+    }
+    &.extra-forward-btn{
+        right: 28px;
+        top: 36px;
     }
   }
 

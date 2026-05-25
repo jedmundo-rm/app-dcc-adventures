@@ -40,13 +40,15 @@
             $("#screen").addClass('active');
         }
 
-        //============================================
-        // TWEENMAX
-        //============================================
+
 
         const extraLayer = {
 
-            // ========== FUNCIONES OCULTAR / MOSTRAR BOTONES ==========
+            //============================================
+            // FUNCIONES
+            //============================================           
+
+            // ========== FUNCION OCULTAR BOTONES ==========
 
             hideBTNS: function() {
                 // OCULTAMOS Botones del HOME
@@ -61,6 +63,8 @@
                     ease: Power3.easeOut
                 });
             },
+
+            // ========== FUNCION MOSTRAR BOTONES ==========
 
             showBTNS: function() {
                 // MOSTRAMOS Botones del HOME
@@ -77,7 +81,29 @@
                 });
             },
 
-            // ========== TERMINA FUNCIONES OCULTAR / MOSTRAR BOTONES ==========
+            // ========== FUNCION / DAR CLASE NO-VISIBLE A TODOS LOS PAGES ==========
+
+            hidePages: function() {
+                $(".page-catatonic, .page-veranos, .page-river, .page-marina, .page-vista, .page-pirates, .page-paddle, .page-gabys, .page-tb, .page-adventures").addClass("no-visible-cm");
+            },
+
+            // ========== FUNCION / REFRESH BACK AND FORWARD CLASSES ==========
+
+            refreshNAVBTNS: function() {
+
+
+                    // Para los dos botones quita las clases que tenga y deja la clase de inicios
+                    $('.extra-back-btn').attr('class', 'extra-back-btn');
+                    $('.extra-forward-btn').attr('class', 'extra-forward-btn');
+
+
+            },
+
+            // ========== TERMINA FUNCIONES ==========
+
+            //============================================
+            // EVENTOS
+            //============================================
 
             events() {
 
@@ -139,37 +165,57 @@
                     // ga("send", "event", "site", "click", "cm-tag/terminos");
                     $(".page-catatonic").removeClass("no-visible-cm");
 
-                    // Ocultamos Botones
+                    // Ocultamos Botones del MENU HOME
                     extraLayer.hideBTNS();
 
                     $(".close-btn-video").hide();
+
+                    // Agregarle clases a los botones back y formward dependiendo de la seccion
+
+                    $(".extra-back-btn").addClass("catatonic-back-btn");
+                    $(".extra-forward-btn").addClass("catatonic-forward-btn");
                 });
 
                 $("#btn-veranos").on("click", function () {
                     // ga("send", "event", "site", "click", "cm-tag/aviso");
                     $(".page-veranos").removeClass("no-visible-cm");
+
+                    // Agregarle clases a los botones back y formward dependiendo de la seccion
+
+                    $(".extra-back-btn").addClass("veranos-back-btn");
+                    $(".extra-forward-btn").addClass("veranos-forward-btn");
                 });
 
                 $("#btn-river").on("click", function () {
                     // ga("send", "event", "site", "click", "cm-tag/aviso");
                     $(".page-river").removeClass("no-visible-cm");
+
+                    // Agregarle clases a los botones back y formward dependiendo de la seccion
+
+                    $(".extra-back-btn").addClass("river-back-btn");
+                    $(".extra-forward-btn").addClass("river-forward-btn");
                 });
 
                 $("#btn-marina").on("click", function () {
                     // ga("send", "event", "site", "click", "cm-tag/aviso");
                     $(".page-marina").removeClass("no-visible-cm");
 
-                    // Ocultamos Botones
+                    // Ocultamos Botones del MENU HOME
                     extraLayer.hideBTNS();
 
                     $(".close-btn-video").hide();
+
+                    // Agregarle clases a los botones back y formward dependiendo de la seccion
+
+                    $(".extra-back-btn").addClass("marina-back-btn");
+                    $(".extra-forward-btn").addClass("marina-forward-btn");
                 });
 
                 $("#btn-vista").on("click", function () {
                     // ga("send", "event", "site", "click", "cm-tag/aviso");
                     $(".page-vista").removeClass("no-visible-cm");
 
-                    // Ocultamos Botones
+                    // Ocultamos Botones del MENU HOME
                     extraLayer.hideBTNS();
 
                     $(".close-btn-video").hide();
@@ -189,7 +235,7 @@
                     // ga("send", "event", "site", "click", "cm-tag/aviso");
                     $(".page-gabys").removeClass("no-visible-cm");
 
-                    // Ocultamos Botones
+                    // Ocultamos Botones del MENU HOME
                     extraLayer.hideBTNS();
 
                     $(".close-btn-video").hide();
@@ -207,11 +253,139 @@
 
 
                 // =========================
+                // BOTON ATRAS
+                // =========================
+                $(".extra-back-btn").on("click", function () {
+
+                    closeVideo();
+
+                    // Agregamos la clase no-visible a todos los Pages
+                    extraLayer.hidePages();
+                    
+
+                    if ($(".extra-back-btn").hasClass("catatonic-back-btn")) {
+                        // Ocultamos seccion Extra Layer
+                        TweenMax.to("#extra-layer", 0.6, {
+                            bottom: "-100%",
+                            // autoAlpha: 0 ,
+                            ease: Power3.easeOut,
+
+                            onComplete() {
+                                // Borramos todas las clases que tengan los botones de BACK y FORWARD
+                                extraLayer.refreshNAVBTNS();
+                                // Damos click al boton donde vamos a abrir la nueva seccion
+                                $(".extra-close-btn").click();
+                            }
+                        });
+                    }
+
+
+                    if ($(".extra-back-btn").hasClass("veranos-back-btn")) {
+                        // Ocultamos seccion Extra Layer
+                        TweenMax.to("#extra-layer", 0.6, {
+                            bottom: "-100%",
+                            // autoAlpha: 0 ,
+                            ease: Power3.easeOut,
+
+                            onComplete() {
+                                // Borramos todas las clases que tengan los botones de BACK y FORWARD
+                                extraLayer.refreshNAVBTNS();
+                                // Damos click al boton donde vamos a abrir la nueva seccion
+                                $("#btn-catatonic").click();
+                            }
+                        });
+                    }
+
+                    if ($(".extra-back-btn").hasClass("river-back-btn")) {
+                        // Ocultamos seccion Extra Layer
+                        TweenMax.to("#extra-layer", 0.6, {
+                            bottom: "-100%",
+                            // autoAlpha: 0 ,
+                            ease: Power3.easeOut,
+
+                            onComplete() {
+                                // Borramos todas las clases que tengan los botones de BACK y FORWARD
+                                extraLayer.refreshNAVBTNS();
+                                // Damos click al boton donde vamos a abrir la nueva seccion
+                                $("#btn-veranos").click();
+                            }
+                        });
+                    }
+
+
+                });
+
+
+                // =========================
+                // BOTON SIGUIENTE
+                // =========================
+
+                $(".extra-forward-btn").on("click", function () {
+
+                    closeVideo();
+
+                    // Agregamos la clase no-visible a todos los Pages
+                    extraLayer.hidePages();
+                   
+
+                    if ($(".extra-forward-btn").hasClass("catatonic-forward-btn")) {
+                        // Ocultamos seccion Extra Layer
+                        TweenMax.to("#extra-layer", 0.6, {
+                            bottom: "-100%",
+                            // autoAlpha: 0 ,
+                            ease: Power3.easeOut,
+
+                            onComplete() {
+                                // Borramos todas las clases que tengan los botones de BACK y FORWARD
+                                extraLayer.refreshNAVBTNS();
+                                // Damos click al boton donde vamos a abrir la nueva seccion
+                                $("#btn-veranos").click();
+                            }
+                        });
+                    }
+
+                    if ($(".extra-forward-btn").hasClass("veranos-forward-btn")) {
+                        // Ocultamos seccion Extra Layer
+                        TweenMax.to("#extra-layer", 0.6, {
+                            bottom: "-100%",
+                            // autoAlpha: 0 ,
+                            ease: Power3.easeOut,
+
+                            onComplete() {
+                                // Borramos todas las clases que tengan los botones de BACK y FORWARD
+                                extraLayer.refreshNAVBTNS();
+                                // Damos click al boton donde vamos a abrir la nueva seccion
+                                $("#btn-river").click();
+                            }
+                        });
+                    }
+
+
+                    if ($(".extra-forward-btn").hasClass("veranos-river-btn")) {
+                        // Ocultamos seccion Extra Layer
+                        TweenMax.to("#extra-layer", 0.6, {
+                            bottom: "-100%",
+                            // autoAlpha: 0 ,
+                            ease: Power3.easeOut,
+
+                            onComplete() {
+                                // Borramos todas las clases que tengan los botones de BACK y FORWARD
+                                extraLayer.refreshNAVBTNS();
+                                // Damos click al boton donde vamos a abrir la nueva seccion
+                                $("#btn-marina").click();
+                            }
+                        });
+                    }
+
+                });
+
+                // =========================
                 // CERRAR EXTRA LAYER
                 // =========================
                 $(".extra-close-btn").on("click", function () {
 
-                    $(".page-catatonic, .page-veranos, .page-river, .page-marina, .page-vista, .page-pirates, .page-paddle, .page-gabys, .page-tb, .page-adventures").addClass("no-visible-cm");
+                    // Agregamos la clase no-visible a todos los Pages
+                    extraLayer.hidePages();
 
                     // ga("send", "event", "site", "click", "cm-tag/open");
 
@@ -223,23 +397,28 @@
 
                     $("#extra-layer").css("z-index", 200000);
 
+                    // Ocultamos seccion Extra Layer
                     TweenMax.to("#extra-layer", 1, {
                         bottom: "-100%",
                         // autoAlpha: 0 ,
                         ease: Power3.easeOut,
 
                         onComplete() {
-
+                            // Ocultamos boton del Home
                             TweenMax.to($(".extra-close-btn"), 0.5, {
                                 left: "-150px",
                                 ease: Expo.easeOut
                             });
 
+                            // Borramos todas las clases que tengan los botones de BACK y FORWARD
+                            extraLayer.refreshNAVBTNS();
+
                         }
                     });
                     
-                    // Mostramos Botones
+                    // Mostramos Botones del MENU HOME
                     extraLayer.showBTNS();
+    
 
                 });
             },

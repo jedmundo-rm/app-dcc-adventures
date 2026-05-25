@@ -90,22 +90,29 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
 }
-#extra-layer button.extra-close-btn {
+#extra-layer button {
   border: 1px solid transparent;
   background: transparent;
   position: absolute;
   z-index: 5000;
-  left: -150px;
   width: 135px;
-  top: 36px;
   cursor: pointer;
 }
-#extra-layer button.extra-close-btn:focus {
-  outline: 0 solid blue;
-}
-#extra-layer button.extra-close-btn img {
+#extra-layer button img {
   width: 100%;
   float: left;
+}
+#extra-layer button.extra-close-btn {
+  left: -150px;
+  top: 36px;
+}
+#extra-layer button.extra-back-btn {
+  right: 154px;
+  top: 36px;
+}
+#extra-layer button.extra-forward-btn {
+  right: 28px;
+  top: 36px;
 }
 #extra-layer .page {
   position: absolute;
