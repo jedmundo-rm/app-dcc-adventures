@@ -136,16 +136,17 @@ body {
         float: left; 
     }
 
+    // Ponemos la posicion de lso botones de forma que esten no visibles
     &.extra-close-btn {
         left: -150px;
         top: 36px;     
     }
     &.extra-back-btn{
-        right: 154px;
+        right: -150px;
         top: 36px;
     }
     &.extra-forward-btn{
-        right: 28px;
+        right: -150px;
         top: 36px;
     }
   }

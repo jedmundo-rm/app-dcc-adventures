@@ -90,14 +90,44 @@
             // ========== FUNCION / REFRESH BACK AND FORWARD CLASSES ==========
 
             refreshNAVBTNS: function() {
-
-
-                    // Para los dos botones quita las clases que tenga y deja la clase de inicios
-                    $('.extra-back-btn').attr('class', 'extra-back-btn');
-                    $('.extra-forward-btn').attr('class', 'extra-forward-btn');
-
-
+                // Para los dos botones quita las clases que tenga y deja la clase de inicios
+                $('.extra-back-btn').attr('class', 'extra-back-btn');
+                $('.extra-forward-btn').attr('class', 'extra-forward-btn');
             },
+
+            // ========== FUNCION / CERRAR EXTRA LAYER ==========
+
+            hideExtraLayer: function(accionesAlTerminar) {
+                TweenMax.to("#extra-layer", 0.6, {
+                    bottom: "-100%",
+                    ease: Power3.easeOut,
+                    onComplete: function() {
+                        // Ocultamos boton del Home
+                        TweenMax.to($(".extra-close-btn"), 1, {
+                            left: "-150px",
+                            ease: Expo.easeOut,
+                        });
+
+                        // Ocultamos boton de Back
+                        TweenMax.to($(".extra-back-btn"), 1, {
+                            right: "-150px",
+                            ease: Expo.easeOut,
+                        });
+
+                        // Ocultamos boton de Forward
+                        TweenMax.to($(".extra-forward-btn"), 1, {
+                            right: "-150px",
+                            ease: Expo.easeOut,
+                        });
+
+                        // Validamos que se haya pasado una función antes de ejecutarla
+                        if (typeof accionesAlTerminar === "function") {
+                            accionesAlTerminar();
+                        }
+                    }
+                });
+            },
+
 
             // ========== TERMINA FUNCIONES ==========
 
@@ -125,7 +155,6 @@
                 // ABRIR EXTRA LAYER
                 // =========================
 
-
                 $("#btn-catatonic, #btn-veranos, #btn-river, #btn-marina, #btn-vista, #btn-pirates, #btn-paddle, #btn-gabys, #btn-tb, #btn-adventures").on("click", function () {
 
                     $("html, body, #extra-layer").animate({
@@ -149,11 +178,21 @@
                         }
                     });
 
-                    TweenMax.to($(".extra-close-btn"), 0.5, {
+                    TweenMax.to($(".extra-close-btn"), 1, {
                         left: "40px",
-                        ease: Expo.easeOut
+                        ease: Expo.easeOut,
+                        delay: 0.5, // <--- Aquí agregas el delay en segundos
                     });
-
+                    TweenMax.to($(".extra-back-btn"), 1, {
+                        right: "154px",
+                        ease: Expo.easeOut,
+                        delay: 0.5, // <--- Aquí agregas el delay en segundos
+                    });
+                    TweenMax.to($(".extra-forward-btn"), 1, {
+                        right: "28px",
+                        ease: Expo.easeOut,
+                        delay: 0.5, // <--- Aquí agregas el delay en segundos
+                    });
 
                 });
 
@@ -397,25 +436,15 @@
 
                     $("#extra-layer").css("z-index", 200000);
 
-                    // Ocultamos seccion Extra Layer
-                    TweenMax.to("#extra-layer", 1, {
-                        bottom: "-100%",
-                        // autoAlpha: 0 ,
-                        ease: Power3.easeOut,
-
-                        onComplete() {
-                            // Ocultamos boton del Home
-                            TweenMax.to($(".extra-close-btn"), 0.5, {
-                                left: "-150px",
-                                ease: Expo.easeOut
-                            });
-
-                            // Borramos todas las clases que tengan los botones de BACK y FORWARD
-                            extraLayer.refreshNAVBTNS();
-
-                        }
-                    });
                     
+                    // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcionn de arriba accionesAlTerminar()
+                    extraLayer.hideExtraLayer();
+
+                    function accionesAlTerminar(){
+                        // Borramos todas las clases que tengan los botones de BACK y FORWARD
+                        extraLayer.refreshNAVBTNS();
+                    };
+                
                     // Mostramos Botones del MENU HOME
                     extraLayer.showBTNS();
     
@@ -426,6 +455,8 @@
             init() {
                 this.events();
             }
+
+            
         };
 
         // =========================================

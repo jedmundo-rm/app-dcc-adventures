@@ -107,11 +107,11 @@ body {
   top: 36px;
 }
 #extra-layer button.extra-back-btn {
-  right: 154px;
+  right: -150px;
   top: 36px;
 }
 #extra-layer button.extra-forward-btn {
-  right: 28px;
+  right: -150px;
   top: 36px;
 }
 #extra-layer .page {
