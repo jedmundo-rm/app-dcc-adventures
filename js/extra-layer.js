@@ -98,36 +98,42 @@
             // ========== FUNCION / CERRAR EXTRA LAYER ==========
 
             hideExtraLayer: function(accionesAlTerminar) {
-                TweenMax.to("#extra-layer", 0.6, {
+
+                TweenMax.to("#extra-layer", 0.5, {
                     bottom: "-100%",
                     ease: Power3.easeOut,
+                    //autoAlpha: 0,
+
                     onComplete: function() {
-                        // Ocultamos boton del Home
-                        TweenMax.to($(".extra-close-btn"), 1, {
-                            left: "-150px",
-                            ease: Expo.easeOut,
-                        });
+                        // Borramos todas las clases que tengan los botones de BACK y FORWARD
+                        extraLayer.refreshNAVBTNS();
 
-                        // Ocultamos boton de Back
-                        TweenMax.to($(".extra-back-btn"), 1, {
-                            right: "-150px",
-                            ease: Expo.easeOut,
-                        });
-
-                        // Ocultamos boton de Forward
-                        TweenMax.to($(".extra-forward-btn"), 1, {
-                            right: "-150px",
-                            ease: Expo.easeOut,
-                        });
-
-                        // Validamos que se haya pasado una función antes de ejecutarla
-                        if (typeof accionesAlTerminar === "function") {
-                            accionesAlTerminar();
-                        }
+                        accionesAlTerminar();
                     }
                 });
-            },
 
+                // Ocultamos boton del Home
+                TweenMax.to($(".extra-close-btn"), 0.5, {
+                    left: "-150px",
+                    ease: Expo.easeOut,
+                    delay: 0.3,
+                });
+
+                // Ocultamos boton de Back
+                TweenMax.to($(".extra-back-btn"), 0.5, {
+                    right: "-150px",
+                    ease: Expo.easeOut,
+                    delay: 0.3,
+                });
+
+                // Ocultamos boton de Forward
+                TweenMax.to($(".extra-forward-btn"), 0.5, {
+                    right: "-150px",
+                    ease: Expo.easeOut,
+                    delay: 0.3,
+                });
+                
+            },
 
             // ========== TERMINA FUNCIONES ==========
 
@@ -169,26 +175,26 @@
 
                     TweenMax.to("#extra-layer", 1, {
                         bottom: "0",
-                        // autoAlpha: 1 ,
                         ease: Power3.easeOut,
-                       
+                        //autoAlpha: 1,
                         onComplete() {
 
           
                         }
                     });
 
-                    TweenMax.to($(".extra-close-btn"), 1, {
+                    // Mostramos los botones de Navegacion
+                    TweenMax.to($(".extra-close-btn"), 0.5, {
                         left: "40px",
                         ease: Expo.easeOut,
                         delay: 0.5, // <--- Aquí agregas el delay en segundos
                     });
-                    TweenMax.to($(".extra-back-btn"), 1, {
+                    TweenMax.to($(".extra-back-btn"), 0.5, {
                         right: "154px",
                         ease: Expo.easeOut,
                         delay: 0.5, // <--- Aquí agregas el delay en segundos
                     });
-                    TweenMax.to($(".extra-forward-btn"), 1, {
+                    TweenMax.to($(".extra-forward-btn"), 0.5, {
                         right: "28px",
                         ease: Expo.easeOut,
                         delay: 0.5, // <--- Aquí agregas el delay en segundos
@@ -303,55 +309,38 @@
                     
 
                     if ($(".extra-back-btn").hasClass("catatonic-back-btn")) {
-                        // Ocultamos seccion Extra Layer
-                        TweenMax.to("#extra-layer", 0.6, {
-                            bottom: "-100%",
-                            // autoAlpha: 0 ,
-                            ease: Power3.easeOut,
 
-                            onComplete() {
-                                // Borramos todas las clases que tengan los botones de BACK y FORWARD
-                                extraLayer.refreshNAVBTNS();
-                                // Damos click al boton donde vamos a abrir la nueva seccion
-                                $(".extra-close-btn").click();
-                            }
-                        });
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $(".extra-close-btn").click();
+                        };
                     }
 
 
                     if ($(".extra-back-btn").hasClass("veranos-back-btn")) {
-                        // Ocultamos seccion Extra Layer
-                        TweenMax.to("#extra-layer", 0.6, {
-                            bottom: "-100%",
-                            // autoAlpha: 0 ,
-                            ease: Power3.easeOut,
 
-                            onComplete() {
-                                // Borramos todas las clases que tengan los botones de BACK y FORWARD
-                                extraLayer.refreshNAVBTNS();
-                                // Damos click al boton donde vamos a abrir la nueva seccion
-                                $("#btn-catatonic").click();
-                            }
-                        });
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-catatonic").click();
+                        };
                     }
 
                     if ($(".extra-back-btn").hasClass("river-back-btn")) {
-                        // Ocultamos seccion Extra Layer
-                        TweenMax.to("#extra-layer", 0.6, {
-                            bottom: "-100%",
-                            // autoAlpha: 0 ,
-                            ease: Power3.easeOut,
 
-                            onComplete() {
-                                // Borramos todas las clases que tengan los botones de BACK y FORWARD
-                                extraLayer.refreshNAVBTNS();
-                                // Damos click al boton donde vamos a abrir la nueva seccion
-                                $("#btn-veranos").click();
-                            }
-                        });
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-veranos").click();
+                        };
                     }
-
-
                 });
 
 
@@ -368,52 +357,37 @@
                    
 
                     if ($(".extra-forward-btn").hasClass("catatonic-forward-btn")) {
-                        // Ocultamos seccion Extra Layer
-                        TweenMax.to("#extra-layer", 0.6, {
-                            bottom: "-100%",
-                            // autoAlpha: 0 ,
-                            ease: Power3.easeOut,
 
-                            onComplete() {
-                                // Borramos todas las clases que tengan los botones de BACK y FORWARD
-                                extraLayer.refreshNAVBTNS();
-                                // Damos click al boton donde vamos a abrir la nueva seccion
-                                $("#btn-veranos").click();
-                            }
-                        });
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-veranos").click();
+                        };
                     }
 
                     if ($(".extra-forward-btn").hasClass("veranos-forward-btn")) {
-                        // Ocultamos seccion Extra Layer
-                        TweenMax.to("#extra-layer", 0.6, {
-                            bottom: "-100%",
-                            // autoAlpha: 0 ,
-                            ease: Power3.easeOut,
 
-                            onComplete() {
-                                // Borramos todas las clases que tengan los botones de BACK y FORWARD
-                                extraLayer.refreshNAVBTNS();
-                                // Damos click al boton donde vamos a abrir la nueva seccion
-                                $("#btn-river").click();
-                            }
-                        });
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-river").click();
+                        };
                     }
 
 
                     if ($(".extra-forward-btn").hasClass("veranos-river-btn")) {
-                        // Ocultamos seccion Extra Layer
-                        TweenMax.to("#extra-layer", 0.6, {
-                            bottom: "-100%",
-                            // autoAlpha: 0 ,
-                            ease: Power3.easeOut,
 
-                            onComplete() {
-                                // Borramos todas las clases que tengan los botones de BACK y FORWARD
-                                extraLayer.refreshNAVBTNS();
-                                // Damos click al boton donde vamos a abrir la nueva seccion
-                                $("#btn-marina").click();
-                            }
-                        });
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-marina").click();
+                        };
                     }
 
                 });
@@ -437,14 +411,10 @@
                     $("#extra-layer").css("z-index", 200000);
 
                     
-                    // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcionn de arriba accionesAlTerminar()
+                    // Ejecutamos la funcion que Oculta el Extra Layer
                     extraLayer.hideExtraLayer();
 
-                    function accionesAlTerminar(){
-                        // Borramos todas las clases que tengan los botones de BACK y FORWARD
-                        extraLayer.refreshNAVBTNS();
-                    };
-                
+
                     // Mostramos Botones del MENU HOME
                     extraLayer.showBTNS();
     
