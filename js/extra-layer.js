@@ -48,7 +48,7 @@
             // FUNCIONES
             //============================================           
 
-            // ========== FUNCION OCULTAR BOTONES ==========
+            // ========== FUNCION OCULTAR BOTONES DEL MENU HOME ==========
 
             hideBTNS: function() {
                 // OCULTAMOS Botones del HOME
@@ -57,7 +57,7 @@
                     ease: Power3.easeOut
                 });
 
-                // OCULTAMOS Botones del MENU
+                // OCULTAMOS Barra de Fondo del Logo
                 TweenMax.to("#screen", 0.1, {
                     bottom: "-40%",
                     ease: Power3.easeOut
@@ -74,7 +74,7 @@
                 });
 
                 
-                // MOSTRAMOS Botones del MENU
+                // MOSTRAMOS Barra del Fondo del Logo
                 TweenMax.to("#screen", 0.1, {
                     bottom: "-200px",
                     ease: Power3.easeOut
@@ -170,9 +170,10 @@
                     $("#extra-layer").css("z-index", 200000);
 
 
-                    // Ocultamos Botones
+                    // Ocultamos Botones del MENU HOME
                     extraLayer.hideBTNS();
 
+                    // Mostramos el Extra Layer
                     TweenMax.to("#extra-layer", 1, {
                         bottom: "0",
                         ease: Power3.easeOut,
