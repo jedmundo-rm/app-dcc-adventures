@@ -217,7 +217,6 @@
                     $(".close-btn-video").hide();
 
                     // Agregarle clases a los botones back y formward dependiendo de la seccion
-
                     $(".extra-back-btn").addClass("catatonic-back-btn");
                     $(".extra-forward-btn").addClass("catatonic-forward-btn");
                 });
@@ -227,7 +226,6 @@
                     $(".page-veranos").removeClass("no-visible-cm");
 
                     // Agregarle clases a los botones back y formward dependiendo de la seccion
-
                     $(".extra-back-btn").addClass("veranos-back-btn");
                     $(".extra-forward-btn").addClass("veranos-forward-btn");
                 });
@@ -237,7 +235,6 @@
                     $(".page-river").removeClass("no-visible-cm");
 
                     // Agregarle clases a los botones back y formward dependiendo de la seccion
-
                     $(".extra-back-btn").addClass("river-back-btn");
                     $(".extra-forward-btn").addClass("river-forward-btn");
                 });
@@ -252,7 +249,6 @@
                     $(".close-btn-video").hide();
 
                     // Agregarle clases a los botones back y formward dependiendo de la seccion
-
                     $(".extra-back-btn").addClass("marina-back-btn");
                     $(".extra-forward-btn").addClass("marina-forward-btn");
                 });
@@ -265,16 +261,28 @@
                     extraLayer.hideBTNS();
 
                     $(".close-btn-video").hide();
+
+                    // Agregarle clases a los botones back y formward dependiendo de la seccion
+                    $(".extra-back-btn").addClass("vista-back-btn");
+                    $(".extra-forward-btn").addClass("vista-forward-btn");
                 });
 
                 $("#btn-pirates").on("click", function () {
                     // ga("send", "event", "site", "click", "cm-tag/aviso");
                     $(".page-pirates").removeClass("no-visible-cm");
+
+                    // Agregarle clases a los botones back y formward dependiendo de la seccion
+                    $(".extra-back-btn").addClass("pirates-back-btn");
+                    $(".extra-forward-btn").addClass("pirates-forward-btn");
                 });
 
                 $("#btn-paddle").on("click", function () {
                     // ga("send", "event", "site", "click", "cm-tag/aviso");
                     $(".page-paddle").removeClass("no-visible-cm");
+
+                    // Agregarle clases a los botones back y formward dependiendo de la seccion
+                    $(".extra-back-btn").addClass("paddle-back-btn");
+                    $(".extra-forward-btn").addClass("paddle-forward-btn");
                 });
 
                 $("#btn-gabys").on("click", function () {
@@ -285,16 +293,28 @@
                     extraLayer.hideBTNS();
 
                     $(".close-btn-video").hide();
+
+                    // Agregarle clases a los botones back y formward dependiendo de la seccion
+                    $(".extra-back-btn").addClass("gabys-back-btn");
+                    $(".extra-forward-btn").addClass("gabys-forward-btn");
                 });
 
                 $("#btn-tb").on("click", function () {
                     // ga("send", "event", "site", "click", "cm-tag/aviso");
                     $(".page-tb").removeClass("no-visible-cm");
+
+                    // Agregarle clases a los botones back y formward dependiendo de la seccion
+                    $(".extra-back-btn").addClass("tb-back-btn");
+                    $(".extra-forward-btn").addClass("tb-forward-btn");
                 });
 
                 $("#btn-adventures").on("click", function () {
                     // ga("send", "event", "site", "click", "cm-tag/aviso");
                     $(".page-adventures").removeClass("no-visible-cm");
+
+                    // Agregarle clases a los botones back y formward dependiendo de la seccion
+                    $(".extra-back-btn").addClass("adventures-back-btn");
+                    $(".extra-forward-btn").addClass("adventures-forward-btn");
                 });
 
 
@@ -342,6 +362,83 @@
                             $("#btn-veranos").click();
                         };
                     }
+
+                    if ($(".extra-back-btn").hasClass("marina-back-btn")) {
+
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-river").click();
+                        };
+                    }
+
+                    if ($(".extra-back-btn").hasClass("vista-back-btn")) {
+
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-marina").click();
+                        };
+                    }
+
+                    if ($(".extra-back-btn").hasClass("pirates-back-btn")) {
+
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-vista").click();
+                        };
+                    }
+
+                    if ($(".extra-back-btn").hasClass("paddle-back-btn")) {
+
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-pirates").click();
+                        };
+                    }
+
+                    if ($(".extra-back-btn").hasClass("gabys-back-btn")) {
+
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-paddle").click();
+                        };
+                    }
+
+                    if ($(".extra-back-btn").hasClass("tb-back-btn")) {
+
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-gabys").click();
+                        };
+                    }
+
+                    if ($(".extra-back-btn").hasClass("adventures-back-btn")) {
+
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-tb").click();
+                        };
+                    }
                 });
 
 
@@ -380,7 +477,7 @@
                     }
 
 
-                    if ($(".extra-forward-btn").hasClass("veranos-river-btn")) {
+                    if ($(".extra-forward-btn").hasClass("river-forward-btn")) {
 
                         // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
                         extraLayer.hideExtraLayer(accionesAlTerminar);
@@ -388,6 +485,83 @@
                         function accionesAlTerminar(){
                             // Damos click al boton donde vamos a abrir la nueva seccion
                             $("#btn-marina").click();
+                        };
+                    }
+
+                    if ($(".extra-forward-btn").hasClass("marina-forward-btn")) {
+
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-vista").click();
+                        };
+                    }
+
+                    if ($(".extra-forward-btn").hasClass("vista-forward-btn")) {
+
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-pirates").click();
+                        };
+                    }
+
+                    if ($(".extra-forward-btn").hasClass("pirates-forward-btn")) {
+
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-paddle").click();
+                        };
+                    }
+
+                    if ($(".extra-forward-btn").hasClass("paddle-forward-btn")) {
+
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-gabys").click();
+                        };
+                    }
+
+                    if ($(".extra-forward-btn").hasClass("gabys-forward-btn")) {
+
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-tb").click();
+                        };
+                    }
+
+                    if ($(".extra-forward-btn").hasClass("tb-forward-btn")) {
+
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $("#btn-adventures").click();
+                        };
+                    }
+
+                    if ($(".extra-forward-btn").hasClass("adventures-forward-btn")) {
+
+                        // Ejecutamos la funcion que Oculta el Extra Layer y que a la vez manda a llamar la funcion accionesAlTerminar() para ejecutar la accion en el OnComplete aninado en la funcion
+                        extraLayer.hideExtraLayer(accionesAlTerminar);
+
+                        function accionesAlTerminar(){
+                            // Damos click al boton donde vamos a abrir la nueva seccion
+                            $(".extra-close-btn").click();
                         };
                     }
 
