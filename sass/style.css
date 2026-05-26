@@ -213,7 +213,7 @@ body {
 }
 
 #videoPlayerContainer {
-  transition: 0.8s ease-in;
+  transition: 0.5s ease-in;
   transform: all;
   transition-delay: 0s;
   position: fixed;
@@ -250,7 +250,7 @@ body {
   top: 0px;
   right: 5px;
   padding: 10px 20px;
-  background: #B6A06F;
+  background: #B6A06F !important;
   color: white;
   border: none;
   border-radius: 8px;

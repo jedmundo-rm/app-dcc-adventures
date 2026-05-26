@@ -1,7 +1,7 @@
 
 #videoPlayerContainer {
   
-  @include aplicarTransicion(0.8s, 0s);
+  @include aplicarTransicion(0.5s, 0s);
 
     position: fixed;
     top:0%;
@@ -44,7 +44,7 @@
     top: 0px;
     right: 5px;
     padding: 10px 20px;
-    background: #B6A06F;
+    background: #B6A06F !important;
     color: white;
     border: none;
     border-radius: 8px;

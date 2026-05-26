@@ -105,6 +105,8 @@
                     //autoAlpha: 0,
 
                     onComplete: function() {
+                        // Mostramos el boton de Cerrar Video
+                        $(".close-btn-video").show();
                         // Borramos todas las clases que tengan los botones de BACK y FORWARD
                         extraLayer.refreshNAVBTNS();
 
@@ -576,8 +578,6 @@
                     extraLayer.hidePages();
 
                     // ga("send", "event", "site", "click", "cm-tag/open");
-
-                    $(".close-btn-video").show();
 
                     $("html, body").animate({
                         scrollTop: 0
