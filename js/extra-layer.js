@@ -305,6 +305,11 @@
                     // ga("send", "event", "site", "click", "cm-tag/aviso");
                     $(".page-tb").removeClass("no-visible-cm");
 
+                    // Ocultamos Botones del MENU HOME
+                    extraLayer.hideBTNS();
+
+                    $(".close-btn-video").hide();
+
                     // Agregarle clases a los botones back y formward dependiendo de la seccion
                     $(".extra-back-btn").addClass("tb-back-btn");
                     $(".extra-forward-btn").addClass("tb-forward-btn");
