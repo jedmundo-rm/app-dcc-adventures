@@ -195,6 +195,14 @@ html, body {
 }
 
 .row{
+    &.logo-section{
+        img{
+            width: 60%;
+            margin: 0 auto;
+            display: block;       
+        }
+
+    }
     &.thumbs-wrapper{
         .thumb{
             &.tercera-fila{
@@ -233,10 +241,10 @@ html, body {
 
 .page-veranos{
     .thumbs-wrapper{
-        padding: 4rem 10rem;
+        padding: 0rem 10rem;
         // esta es la resolucion que vamos a usar
         @media(min-width: 1367px){
-            padding: 14rem 20rem;
+            padding: 6rem 20rem;
         } 
     }        
 }

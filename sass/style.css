@@ -151,6 +151,11 @@ html #app-wrapper, body #app-wrapper {
   }
 }
 
+.row.logo-section img {
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+}
 .row.thumbs-wrapper .thumb.tercera-fila img {
   padding: 0 2.2rem;
 }
@@ -180,11 +185,11 @@ html #app-wrapper, body #app-wrapper {
 }
 
 .page-veranos .thumbs-wrapper {
-  padding: 4rem 10rem;
+  padding: 0rem 10rem;
 }
 @media (min-width: 1367px) {
   .page-veranos .thumbs-wrapper {
-    padding: 14rem 20rem;
+    padding: 6rem 20rem;
   }
 }
 
