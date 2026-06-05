@@ -115,7 +115,7 @@ html #app-wrapper, body #app-wrapper {
   background: transparent;
   position: absolute;
   z-index: 5000;
-  width: 110px;
+  width: 135px;
   cursor: pointer;
 }
 #extra-layer button img {
