@@ -193,12 +193,12 @@
                         delay: 0.5, // <--- Aquí agregas el delay en segundos
                     });
                     TweenMax.to($(".extra-back-btn"), 0.5, {
-                        right: "154px",
+                        right: "140px",
                         ease: Expo.easeOut,
                         delay: 0.5, // <--- Aquí agregas el delay en segundos
                     });
                     TweenMax.to($(".extra-forward-btn"), 0.5, {
-                        right: "28px",
+                        right: "40px",
                         ease: Expo.easeOut,
                         delay: 0.5, // <--- Aquí agregas el delay en segundos
                     });

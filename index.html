@@ -113,8 +113,11 @@
             
                 <!-- Contenedor del reproductor (oculto por defecto) -->
                 <div id="videoPlayerContainer" class="hidden">
-                    <button class="close-btn-video" onclick="closeVideo()">Close</button>
-                    <video id="mainVideo" controls playsinline></video>
+                    <div class="video-wrapper" style="position: relative;">
+                        <button class="close-btn-video" onclick="closeVideo()">Close</button>
+                        <video id="mainVideo" controls playsinline></video>                        
+                    </div>
+
                 </div>
             
                 <!-- ============================================
