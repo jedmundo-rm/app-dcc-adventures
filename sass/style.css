@@ -237,18 +237,11 @@ html #app-wrapper, body #app-wrapper {
   height: 100%;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
-  max-width: 1948px;
-  max-height: 1108px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 100;
-}
-@media (min-width: 1367px) {
-  #videoPlayerContainer {
-    top: 22%;
-  }
 }
 #videoPlayerContainer .video-wrapper {
   position: relative;
@@ -280,6 +273,6 @@ html #app-wrapper, body #app-wrapper {
 }
 @media (min-width: 1367px) {
   .close-btn-video {
-    top: -80px;
+    top: 0px;
   }
 }/*# sourceMappingURL=style.css.map */
