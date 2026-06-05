@@ -211,7 +211,7 @@ body {
 
 .page-veranos{
     .thumbs-wrapper{
-        padding: 4rem 6rem;
+        padding: 4rem 14rem;
         // esta es la resolucion que vamos a usar
         @media(min-width: 1367px){
             padding: 14rem 20rem;
@@ -255,7 +255,7 @@ body {
 .page-adventures{
     .thumbs-wrapper{
         .ultima-fila{
-            padding: 0rem 31rem;
+            padding: 0rem 5rem;
             // esta es la resolucion que vamos a usar
             @media(min-width: 1367px){
                 padding: 0;

@@ -160,7 +160,7 @@ body {
 }
 
 .page-veranos .thumbs-wrapper {
-  padding: 4rem 6rem;
+  padding: 4rem 14rem;
 }
 @media (min-width: 1367px) {
   .page-veranos .thumbs-wrapper {
@@ -196,7 +196,7 @@ body {
 }
 
 .page-adventures .thumbs-wrapper .ultima-fila {
-  padding: 0rem 31rem;
+  padding: 0rem 5rem;
 }
 @media (min-width: 1367px) {
   .page-adventures .thumbs-wrapper .ultima-fila {
