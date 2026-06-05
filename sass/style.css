@@ -249,11 +249,13 @@ html #app-wrapper, body #app-wrapper {
   align-items: center;
 }
 #videoPlayerContainer .video-wrapper #mainVideo {
-  width: 100%;
-  height: 80%;
+  width: 100%; /* Se adapta al ancho del contenedor padre */
+  max-width: 1366px; /* El ancho máximo de tu iPad Pro */
+  height: auto; /* Controles de altura automáticos basados en el video */
+  display: block; /* Elimina espacios fantasma debajo del video */
   background-color: #fff;
   border: 6px solid rgb(182, 160, 111);
-  border-radius: 24px;
+  border-radius: 32px;
   /* El truco para iOS: */
   -o-object-fit: contain;
      object-fit: contain; /* Asegura que el contenido se ajuste al tag */
