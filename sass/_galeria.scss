@@ -28,7 +28,7 @@
 
         #mainVideo {
           width: 100%;            /* Se adapta al ancho del contenedor padre */
-          max-width: 1366px;      /* El ancho máximo de tu iPad Pro */
+          max-width: 1072px;      /* El ancho máximo de tu iPad Pro */
           height: auto;           /* Controles de altura automáticos basados en el video */
           display: block;         /* Elimina espacios fantasma debajo del video */
           background-color: #fff;
@@ -37,7 +37,6 @@
 
           /* El truco para iOS: */
           object-fit: contain;    /* Asegura que el contenido se ajuste al tag */
-          aspect-ratio: 4 / 3;
       }      
     }
 
