@@ -148,7 +148,7 @@ body {
   }
 }
 
-.page-veranos, .page-pirates, .page-paddle, .page-tb, .page-adventures {
+.page-adventures {
   overflow: scroll;
   width: 100%;
   height: 100%;
