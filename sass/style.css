@@ -254,6 +254,9 @@ html #app-wrapper, body #app-wrapper {
   background-color: #fff;
   border: 6px solid rgb(182, 160, 111);
   border-radius: 24px;
+  /* El truco para iOS: */
+  -o-object-fit: contain;
+     object-fit: contain; /* Asegura que el contenido se ajuste al tag */
 }
 
 .hidden {
