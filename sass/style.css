@@ -259,7 +259,7 @@ html #app-wrapper, body #app-wrapper {
   /* El truco para iOS: */
   -o-object-fit: contain;
      object-fit: contain; /* Asegura que el contenido se ajuste al tag */
-  aspect-ratio: 16/9;
+  aspect-ratio: 4/3;
 }
 
 .hidden {
