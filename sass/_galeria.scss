@@ -10,8 +10,8 @@
     background: rgba(255, 255, 255, 0.5);
 
     backdrop-filter: blur(10px);
-    /* El truco para iPad y Safari: */
-    -webkit-backdrop-filter: blur(10px); 
+  /* Compatibilidad total con iPad */
+    -webkit-filter: blur(5px);
     /* Regla estándar para el resto de navegadores */
     backdrop-filter: blur(10px);
 

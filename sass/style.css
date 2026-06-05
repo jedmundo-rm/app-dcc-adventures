@@ -237,7 +237,8 @@ html #app-wrapper, body #app-wrapper {
   height: 100%;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
-  /* El truco para iPad y Safari: */
+  /* Compatibilidad total con iPad */
+  -webkit-filter: blur(5px);
   /* Regla estándar para el resto de navegadores */
   backdrop-filter: blur(10px);
   display: flex;
