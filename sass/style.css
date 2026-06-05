@@ -186,20 +186,11 @@ body {
   }
 }
 
-.page-tb .thumbs-wrapper .ultima-fila {
+.ultima-fila {
   padding: 0rem 4rem;
 }
 @media (min-width: 1367px) {
-  .page-tb .thumbs-wrapper .ultima-fila {
-    padding: 0;
-  }
-}
-
-.page-adventures .thumbs-wrapper .ultima-fila {
-  padding: 0rem 5rem;
-}
-@media (min-width: 1367px) {
-  .page-adventures .thumbs-wrapper .ultima-fila {
+  .ultima-fila {
     padding: 0;
   }
 }

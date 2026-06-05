@@ -239,30 +239,12 @@ body {
     }        
 }
 
-.page-tb{
-    .thumbs-wrapper{
-        .ultima-fila{
-            padding: 0rem 4rem;
-            // esta es la resolucion que vamos a usar
-            @media(min-width: 1367px){
-                padding: 0;
-            } 
-        }
-
-    }   
-}
-
-.page-adventures{
-    .thumbs-wrapper{
-        .ultima-fila{
-            padding: 0rem 5rem;
-            // esta es la resolucion que vamos a usar
-            @media(min-width: 1367px){
-                padding: 0;
-            } 
-        }
-
-    }   
+.ultima-fila{
+    padding: 0rem 4rem;
+    // esta es la resolucion que vamos a usar
+    @media(min-width: 1367px){
+        padding: 0;
+    } 
 }
 
 .no-visible-cm { display: none !important; }
