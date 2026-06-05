@@ -237,6 +237,9 @@ html #app-wrapper, body #app-wrapper {
   height: 100%;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
+  /* El truco para iPad y Safari: */
+  /* Regla estándar para el resto de navegadores */
+  backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -267,13 +270,13 @@ html #app-wrapper, body #app-wrapper {
 
 .close-btn-video {
   position: absolute;
-  top: 82px;
+  top: 0px;
   right: 5px;
   padding: 10px 20px;
   background: #B6A06F !important;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 32px;
   font-size: 24px;
 }
 @media (min-width: 1367px) {
