@@ -24,495 +24,499 @@
 </head>
 <body>
 
-    <!-- ============================================
-    SCREEN
-    ============================================ -->
+    <div id="app-wrapper">
+        <!-- ============================================
+        SCREEN
+        ============================================ -->
 
-    <section id="screen" class="active ">
-        <div class="screen-wrapper">
-            <img id="logo" src="./images/home/Logo-solo.png" alt="" srcset="">
-        </div>
-    </section>
-
-    <!-- ============================================
-    HOME
-    ============================================ -->
-
-    <section id="home" class="container-fluid">
-        <div class="row thumbs-wrapper g-5">
-
-             <!--1ra Fila-->
-
-            <div id="btn-catatonic" class="col-3 thumb" onclick="playVideo('./videos/01_Catatonic-01.mp4')">
-                <img src="./images/home/01Logo-Catatonic.png" alt="" srcset="">
+        <section id="screen" class="active ">
+            <div class="screen-wrapper">
+                <img id="logo" src="./images/home/Logo-solo.png" alt="" srcset="">
             </div>
-            <div id="btn-veranos" class="col-3 thumb">
-                <img src="./images/home/02Logo-LosVeranos.png" alt="" srcset="">
-            </div>
-            <div id="btn-river" class="col-3 thumb">
-                <img src="./images/home/03Logo-RiverPark.png" alt="" srcset="">
-            </div>       
-            <div id="btn-marina" class="col-3 thumb" onclick="playVideo('./videos/04_GolfMarina-Reel 1 - Marina vta fEBRERO 2026.mp4')">
-                <img src="./images/home/04Logo-MarinaVallarta.png" alt="" srcset="">
-            </div>  
-            
-             <!--2da Fila-->   
-
-            <div id="btn-vista" class="col-3 thumb" onclick="playVideo('./videos/05_Golf-VV_INSTITUTIONAL-PROMOTIONALFILM_2026_NEWLOGO2.mov')">
-                <img src="./images/home/05Logo-VistaVallarta.png" alt="" srcset="">
-            </div>
-            <div id="btn-pirates" class="col-3 thumb">
-                <img src="./images/home/06Logo-PirataMarigalante.png" alt="" srcset="">
-            </div>
-            <div id="btn-paddle" class="col-3 thumb">
-                <img src="./images/home/07Logo-PaddleZone.png" alt="" srcset="">
-            </div>       
-            <div id="btn-gabys" class="col-3 thumb" onclick="playVideo('./videos/08_Gabys.mp4')">
-                <img src="./images/home/08Logo-Gabys.png" alt="" srcset="">
-            </div>    
-
-            <!--3ra Fila-->   
-            
-            <div class="col-2"></div>
-            <div id="btn-tb" class="col-4 thumb tercera-fila" onclick="playVideo('./videos/09_TB-ACTIVIDADES TB TOURS MAYO 2026.mov')">
-                <img src="./images/home/09Logo-TBtours.png" alt="" srcset="">
-            </div>
-            <div id="btn-adventures" class="col-4 thumb tercera-fila">
-                <img src="./images/home/10Logo-VallartaAdvent.png" alt="" srcset="">
-            </div> 
-            <div class="col-2"></div>                
-        </div>
-    </section>
-
-
-
-    <!-- ============================================
-    EXTRA INFO
-    ============================================ -->
-
-    <section id="extra-layer">
-        
-        <button class="extra-close-btn" type="button" name="button">
-            <img src="./images/Btn_Home.png" alt="Cerrar" onclick="closeVideo()">
-        </button>
-
-        <button class="extra-back-btn" type="button" name="button">
-            <img src="./images/Btn_Atras.png" alt="Atras" onclick="">
-        </button>
-
-        <button class="extra-forward-btn" type="button" name="button">
-            <img src="./images/Btn_Adelante.png" alt="Adelante" onclick="">
-        </button>
+        </section>
 
         <!-- ============================================
-        PAGES
+        HOME
         ============================================ -->
-        
-        <div class="page">
-        
-            <!-- Contenedor del reproductor (oculto por defecto) -->
-            <div id="videoPlayerContainer" class="hidden">
-                <button class="close-btn-video" onclick="closeVideo()">Close</button>
-                <video id="mainVideo" controls playsinline></video>
+
+        <section id="home" class="container-fluid">
+            <div class="row thumbs-wrapper g-5">
+
+                <!--1ra Fila-->
+
+                <div id="btn-catatonic" class="col-3 thumb" onclick="playVideo('./videos/01_Catatonic-01.mp4')">
+                    <img src="./images/home/01Logo-Catatonic.png" alt="" srcset="">
+                </div>
+                <div id="btn-veranos" class="col-3 thumb">
+                    <img src="./images/home/02Logo-LosVeranos.png" alt="" srcset="">
+                </div>
+                <div id="btn-river" class="col-3 thumb">
+                    <img src="./images/home/03Logo-RiverPark.png" alt="" srcset="">
+                </div>       
+                <div id="btn-marina" class="col-3 thumb" onclick="playVideo('./videos/04_GolfMarina-Reel 1 - Marina vta fEBRERO 2026.mp4')">
+                    <img src="./images/home/04Logo-MarinaVallarta.png" alt="" srcset="">
+                </div>  
+                
+                <!--2da Fila-->   
+
+                <div id="btn-vista" class="col-3 thumb" onclick="playVideo('./videos/05_Golf-VV_INSTITUTIONAL-PROMOTIONALFILM_2026_NEWLOGO2.mov')">
+                    <img src="./images/home/05Logo-VistaVallarta.png" alt="" srcset="">
+                </div>
+                <div id="btn-pirates" class="col-3 thumb">
+                    <img src="./images/home/06Logo-PirataMarigalante.png" alt="" srcset="">
+                </div>
+                <div id="btn-paddle" class="col-3 thumb">
+                    <img src="./images/home/07Logo-PaddleZone.png" alt="" srcset="">
+                </div>       
+                <div id="btn-gabys" class="col-3 thumb" onclick="playVideo('./videos/08_Gabys.mp4')">
+                    <img src="./images/home/08Logo-Gabys.png" alt="" srcset="">
+                </div>    
+
+                <!--3ra Fila-->   
+                
+                <div class="col-2"></div>
+                <div id="btn-tb" class="col-4 thumb tercera-fila" onclick="playVideo('./videos/09_TB-ACTIVIDADES TB TOURS MAYO 2026.mov')">
+                    <img src="./images/home/09Logo-TBtours.png" alt="" srcset="">
+                </div>
+                <div id="btn-adventures" class="col-4 thumb tercera-fila">
+                    <img src="./images/home/10Logo-VallartaAdvent.png" alt="" srcset="">
+                </div> 
+                <div class="col-2"></div>                
             </div>
-        
+        </section>
+
+
+
+        <!-- ============================================
+        EXTRA INFO
+        ============================================ -->
+
+        <section id="extra-layer">
+            
+            <button class="extra-close-btn" type="button" name="button">
+                <img src="./images/Btn_Home.png" alt="Cerrar" onclick="closeVideo()">
+            </button>
+
+            <button class="extra-back-btn" type="button" name="button">
+                <img src="./images/Btn_Atras.png" alt="Atras" onclick="">
+            </button>
+
+            <button class="extra-forward-btn" type="button" name="button">
+                <img src="./images/Btn_Adelante.png" alt="Adelante" onclick="">
+            </button>
+
             <!-- ============================================
-                PAGE: CATATONICS
+            PAGES
+            ============================================ -->
+            
+            <div class="page">
+            
+                <!-- Contenedor del reproductor (oculto por defecto) -->
+                <div id="videoPlayerContainer" class="hidden">
+                    <button class="close-btn-video" onclick="closeVideo()">Close</button>
+                    <video id="mainVideo" controls playsinline></video>
+                </div>
+            
+                <!-- ============================================
+                    PAGE: CATATONICS
+                    ============================================ -->
+
+                <div class="page-catatonic no-visible-cm">
+                    
+                    <!-- Contenedor Izquierdo -->
+                    <div class="">
+
+                        <div class="container d-flex justify-content-center">
+
+                            <!-- Logo -->
+                            <div class="row">
+                                <div class="col-12 py-5">
+                                    <img src="./images/logos/01_Logo_Catatonic.png" alt="" srcset="">
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================
+                PAGE: VERANOS
                 ============================================ -->
 
-            <div class="page-catatonic no-visible-cm">
-                
-                <!-- Contenedor Izquierdo -->
-                <div class="">
+                <div class="page-veranos no-visible-cm">
+                    
+                    <!-- Contenedor Izquierdo -->
+                    <div class="">
 
-                    <div class="container d-flex justify-content-center">
+                        <div class="container-fluid">
 
-                        <!-- Logo -->
-                        <div class="row">
-                            <div class="col-12 py-5">
-                                <img src="./images/logos/01_Logo_Catatonic.png" alt="" srcset="">
-                            </div>                        
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            <!-- Logo -->
+                            <div class="row" style="text-align: center;">
+                                <div class="col-12 py-5">
+                                    <img src="./images/logos/02_Logo_LosVeranos.png" alt="" srcset="">
+                                </div>                        
+                            </div>
+                            
+                            <!-- Thumbs -->
+                            <div class="row g-5 thumbs-wrapper" style="text-align: center;">
 
-            <!-- ============================================
-            PAGE: VERANOS
-            ============================================ -->
+                                <!--1ra Fila-->
 
-            <div class="page-veranos no-visible-cm">
-                
-                <!-- Contenedor Izquierdo -->
-                <div class="">
+                                <div  class="col-6 thumb" onclick="playVideo('./videos/02_Veranos-Canopy Tour.mp4')">
+                                    <img src="./images/thumbs/01_Veranos-01_canopy.png" alt="" srcset="">
+                                </div>
+                                <div  class="col-6 thumb" onclick="playVideo('./videos/02_Veranos-Hiking Tour.mp4')">
+                                    <img src="./images/thumbs/01_Veranos-02_hiking.png" alt="" srcset="">
+                                </div>     
 
-                    <div class="container-fluid">
+                                <!--2da Fila-->
 
-                        <!-- Logo -->
-                        <div class="row" style="text-align: center;">
-                            <div class="col-12 py-5">
-                                <img src="./images/logos/02_Logo_LosVeranos.png" alt="" srcset="">
-                            </div>                        
-                        </div>
+                                <div  class="col-6 thumb" onclick="playVideo('./videos/02_Veranos-Snorkel Tour.mp4')">
+                                    <img src="./images/thumbs/01_Veranos-03_snorkeling.png" alt="" srcset="">
+                                </div>
+                                <div  class="col-6 thumb" onclick="playVideo('./videos/02_Veranos-Video General.mp4')">
+                                    <img src="./images/thumbs/01_Veranos-04_losVeranos.png" alt="" srcset="">
+                                </div>     
+                            </div>
                         
-                        <!-- Thumbs -->
-                        <div class="row g-5 thumbs-wrapper" style="text-align: center;">
-
-                            <!--1ra Fila-->
-
-                            <div  class="col-6 thumb" onclick="playVideo('./videos/02_Veranos-Canopy Tour.mp4')">
-                                <img src="./images/thumbs/01_Veranos-01_canopy.png" alt="" srcset="">
-                            </div>
-                            <div  class="col-6 thumb" onclick="playVideo('./videos/02_Veranos-Hiking Tour.mp4')">
-                                <img src="./images/thumbs/01_Veranos-02_hiking.png" alt="" srcset="">
-                            </div>     
-
-                            <!--2da Fila-->
-
-                            <div  class="col-6 thumb" onclick="playVideo('./videos/02_Veranos-Snorkel Tour.mp4')">
-                                <img src="./images/thumbs/01_Veranos-03_snorkeling.png" alt="" srcset="">
-                            </div>
-                            <div  class="col-6 thumb" onclick="playVideo('./videos/02_Veranos-Video General.mp4')">
-                                <img src="./images/thumbs/01_Veranos-04_losVeranos.png" alt="" srcset="">
-                            </div>     
-                        </div>
-                    
-                    </div>
-                </div>
-            </div>
-                    
-            <!-- ============================================
-            PAGE: RIVER PARK
-            ============================================ -->
-
-            <div class="page-river no-visible-cm">
-                
-                <!-- Contenedor Izquierdo -->
-                <div class="">
-
-                    <div class="container-fluid ">
-
-                        <!-- Logo -->
-                        <div class="row" style="text-align: center;">
-                            <div class="col-12 py-5">
-                                <img src="./images/logos/03_Logo_RiverPark.png" alt="" srcset="">
-                            </div>                        
-                        </div>
-
-                
-                        <!-- Thumbs -->
-                        <div class="row g-5 thumbs-wrapper" style="text-align: center;">
-
-                            <!--1ra Fila-->
-
-                            <div  class="col-4 thumb" onclick="playVideo('./videos/03_River-ATV Jorullo Bridge.mp4')">
-                                <img src="./images/thumbs/02_River-02_ATV.png" alt="" srcset="">
-                            </div>
-                            <div  class="col-4 thumb" onclick="playVideo('./videos/03_River-ATV Jorullo Point.mp4')">
-                                <img src="./images/thumbs/02_River-03_ATV-Jorullo-point.png" alt="" srcset="">
-                            </div>     
-                            <div class="col-4 thumb" onclick="playVideo('./videos/03_River-Hiking Jorullo Point.mp4')">
-                                <img src="./images/thumbs/02_River-01_Hiking-Jorullo.png" alt="" srcset="">
-                            </div>  
-
-                            <!--2da Fila-->
-
-                            <div  class="col-4 thumb" onclick="playVideo('./videos/03_River-Horseback Riding.mp4')">
-                                <img src="./images/thumbs/02_River-04_Horseback.png" alt="" srcset="">
-                            </div>
-                            <div  class="col-4 thumb" onclick="playVideo('./videos/03_River-Jorullo Bridge RZR.mp4')">
-                                <img src="./images/thumbs/02_River-05_RZR.png" alt="" srcset="">
-                            </div>     
-                            <div class="col-4 thumb" onclick="playVideo('./videos/03_River-Jorullo Point RZR.mp4')">
-                                <img src="./images/thumbs/02_River-06_Jorullo-RZR.png" alt="" srcset="">
-                            </div>  
-
-                            <!--3ra Fila-->
-                            <div class="col-4 thumb ultima-fila">
-                            </div>  
-                            <div  class="col-4 thumb ultima-fila" onclick="playVideo('./videos/03_River-Zipline + Mules.mp4')">
-                                <img src="./images/thumbs/02_River-07_Zipline-Mules.png" alt="" srcset="">
-                            </div>     
-                            <div class="col-4 thumb ultima-fila">
-                            </div>  
                         </div>
                     </div>
                 </div>
-            </div>    
-            
-            <!-- ============================================
-            PAGE: MARINA
-            ============================================ -->
-
-            <div class="page-marina no-visible-cm">
-                
-                <!-- Contenedor Izquierdo -->
-                <div class="">
-
-                    <div class="container d-flex justify-content-center">
-
-                        <!-- Logo -->
-                        <div class="row">
-                            <div class="col-12 py-5">
-                                <img src="./images/logos/04_Logo_MarinaVallarta.png" alt="" srcset="">
-                            </div>                        
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ============================================
-            PAGE: VISTA
-            ============================================ -->
-
-            <div class="page-vista no-visible-cm">
-                
-                <!-- Contenedor Izquierdo -->
-                <div class="">
-
-                    <div class="container d-flex justify-content-center">
-
-                        <!-- Logo -->
-                        <div class="row">
-                            <div class="col-12 py-5">
-                                <img src="./images/logos/05_Logo_VistaVallarta.png" alt="" srcset="">
-                            </div>                        
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ============================================
-            PAGE: PIRATES
-            ============================================ -->
-
-            <div class="page-pirates no-visible-cm">
-                
-                <!-- Contenedor Izquierdo -->
-                <div class="">
-
-                    <div class="container-fluid ">
-
-                        <!-- Logo -->
-                        <div class="row" style="text-align: center;">
-                            <div class="col-12 py-5">
-                                <img src="./images/logos/06_Logo_Pirate.png" alt="" srcset="">
-                            </div>                        
-                        </div>
-
-                        <!-- Thumbs -->
-                        <div class="row g-5 thumbs-wrapper" style="text-align: center;">
-
-                            <!--1ra Fila-->
-
-                            <div  class="col-6 thumb" onclick="playVideo('./videos/06_Pirates-Tour-Dia.mp4')">
-                                <img src="./images/thumbs/03_Pirates-01_Pirate-Island.png" alt="" srcset="">
-                            </div>
-                            <div  class="col-6 thumb" onclick="playVideo('./videos/06_Pirates-Tour-Noche.mp4')">
-                                <img src="./images/thumbs/03_Pirates-02_PirateBay.png" alt="" srcset="">
-                            </div>     
-                        </div>
-                    </div>
-                </div>
-            </div>  
-
-            <!-- ============================================
-            PAGE: PADDLE
-            ============================================ -->
-
-            <div class="page-paddle no-visible-cm">
-                
-                <!-- Contenedor Izquierdo -->
-                <div class="">
-
-                    <div class="container-fluid ">
-
-                        <!-- Logo -->
-                        <div class="row" style="text-align: center;">
-                            <div class="col-12 py-5">
-                                <img src="./images/logos/07_Logo_PaddleZone.png" alt="" srcset="">
-                            </div>                        
-                        </div>
-
-                
-                        <!-- Thumbs -->
-                        <div class="row g-5 thumbs-wrapper" style="text-align: center;">
-
-                            <!--1ra Fila-->
-
-                            <div  class="col-6 thumb" onclick="playVideo('./videos/07_Paddle-Sunrise Session.m4v')">
-                                <img src="./images/thumbs/04_Paddle-01_PaddleSunrise.png" alt="" srcset="">
-                            </div>
-                            <div  class="col-6 thumb" onclick="playVideo('./videos/07_Paddlesunset Bioluminescence.m4v')">
-                                <img src="./images/thumbs/04_Paddle-02_PaddleSunset.png" alt="" srcset="">
-                            </div>     
-                        </div>
-                    </div>
-                </div>
-            </div>   
-
-
-            <!-- ============================================
-            PAGE: GABYS
-            ============================================ -->
-
-            <div class="page-gabys no-visible-cm">
-                
-                <!-- Contenedor Izquierdo -->
-                <div class="">
-
-                    <div class="container d-flex justify-content-center">
-
-                        <!-- Logo -->
-                        <div class="row">
-                            <div class="col-12 py-5">
-                                <img src="./images/logos/08_Logo_Gabys.png" alt="" srcset="">
-                            </div>                        
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ============================================
-            PAGE: Tours and Transfers
-            ============================================ -->
-
-            <div class="page-tb no-visible-cm">
-                
-                <!-- Contenedor Izquierdo -->
-                <div class="">
-
-                    <div class="container-fluid ">
-
-                        <!-- Logo -->
-                        <div class="row" style="text-align: center;">
-                            <div class="col-12 py-5">
-                                <img src="./images/logos/09_Logo_TBtours.png" alt="" srcset="">
-                            </div>                        
-                        </div>
-                    </div>
-                </div>
-            </div>  
-
-            <!-- ============================================
-            PAGE: ADVENTURES
-            ============================================ -->
-
-            <div class="page-adventures no-visible-cm">
-                
-                <!-- Contenedor Izquierdo -->
-                <div class="">
-
-                    <div class="container-fluid">
-
-                        <!-- Logo -->
-                        <div class="row" style="text-align: center;">
-                            <div class="col-12 py-5">
-                                <img src="./images/logos/10_Logo_VallartaAdv.png" alt="" srcset="">
-                            </div>                        
-                        </div>
                         
-                        <!-- Thumbs -->
-                        <div class="row g-5 thumbs-wrapper" style="text-align: center;">
+                <!-- ============================================
+                PAGE: RIVER PARK
+                ============================================ -->
 
-                            <!--1ra Fila-->
-
-                            <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-01 All Terrain Safari.mp4')">
-                                <img src="./images/thumbs/05_Activities-01_All-Terrain-Safari.png" alt="" srcset="">
-                            </div>
-                            <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-02 Alma-Premier Gastronomic Journey.mp4')">
-                                <img src="./images/thumbs/05_Activities-02_Alma-Premier.png" alt="" srcset="">
-                            </div>     
-                            <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-03 Majahuitas Beach Day-Promo.mp4')">
-                                <img src="./images/thumbs/05_Activities-03_Majahuitas.png" alt="" srcset="">
-                            </div>  
-                            <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-04 Dolphin Experiences-2025.mp4')">
-                                <img src="./images/thumbs/05_Activities-04_Dolphin.png" alt="" srcset="">
-                            </div>  
-
-                            <!--2da Fila-->
-
-                            <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-05 Extreme_2020.mp4')">
-                                <img src="./images/thumbs/05_Activities-05_Extreme.png" alt="" srcset="">
-                            </div>
-                            <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-06 Island Discovery.mp4')">
-                                <img src="./images/thumbs/05_Activities-06_Island-Discovery.png" alt="" srcset="">
-                            </div>     
-                            <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-07 - Alma - Ritmos de la Noche.mp4')">
-                                <img src="./images/thumbs/05_Activities-07_Alma-Rhythms.png" alt="" srcset="">
-                            </div>  
-                            <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-08 Las Caletas 2026.mp4')">
-                                <img src="./images/thumbs/05_Activities-08_Las-Caletas.png" alt="" srcset="">
-                            </div>
-
-                            <!--3ra Fila-->
-
-                            <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-09 Luxury sailing.mp4')">
-                                <img src="./images/thumbs/05_Activities-09_Sailing.png" alt="" srcset="">
-                            </div>
-                            <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-10 Luxury Snorkeling.mp4')">
-                                <img src="./images/thumbs/05_Activities-10_Snorkeling.png" alt="" srcset="">
-                            </div>     
-                            <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-11 Majahuitas Music Festival.mp4')">
-                                <img src="./images/thumbs/05_Activities-11_Majahuitas-Festival.png" alt="" srcset="">
-                            </div>  
-                            <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-12 MARIETAS ISLANDS & BEACH BBQ.mp4')">
-                                <img src="./images/thumbs/05_Activities-12_Marietas.png" alt="" srcset="">
-                            </div>  
-
-                            <!--4ta Fila-->
-
-                            <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-13 Outdoor_adventure.mp4')">
-                                <img src="./images/thumbs/05_Activities-13_Outdoor.png" alt="" srcset="">
-                            </div>
-                            <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-14 San Sebastian del Oeste - Promocional.mp4')">
-                                <img src="./images/thumbs/05_Activities-14_SanSebastian.png" alt="" srcset="">
-                            </div>     
-                            <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-15 Sayulita San Pancho.mp4')">
-                                <img src="./images/thumbs/05_Activities-15_Sayulita.png" alt="" srcset="">
-                            </div>  
-                            <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-16 Scuba.mp4')">
-                                <img src="./images/thumbs/05_Activities-16_Scuba.png" alt="" srcset="">
-                            </div>  
-
-                            <!--5to Fila-->
-
-                            <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-17 Sea Safari 2026.mp4')">
-                                <img src="./images/thumbs/05_Activities-17_SeaSafari.png" alt="" srcset="">
-                            </div>
-                            <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-18 Sunset Sailing.mp4')">
-                                <img src="./images/thumbs/05_Activities-18_Sunset.png" alt="" srcset="">
-                            </div>     
-                            <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-19 Whale Watching Adventure.mp4')">
-                                <img src="./images/thumbs/05_Activities-19_Whale.png" alt="" srcset="">
-                            </div>  
-                            <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-20 Whale Watching Photo Safari.mp4')">
-                                <img src="./images/thumbs/05_Activities-20_Whale.png" alt="" srcset="">
-                            </div>  
-
-                            <!--6to Fila-->
-
-                            <div class="col-4 thumb ultima-fila">
-                            </div>  
-
-                            <div  class="col-4 thumb ultima-fila" onclick="playVideo('./videos/10_Adventures-21 Yelapa&MajahuitasBeachBBQ.mp4')">
-                                <img src="./images/thumbs/05_Activities-21_Yelapa.png" alt="" srcset="">
-                            </div>
-
-                            <div class="col-4 thumb ultima-fila">
-                            </div>  
-   
-
-
-
-                        </div>
+                <div class="page-river no-visible-cm">
                     
+                    <!-- Contenedor Izquierdo -->
+                    <div class="">
+
+                        <div class="container-fluid ">
+
+                            <!-- Logo -->
+                            <div class="row" style="text-align: center;">
+                                <div class="col-12 py-5">
+                                    <img src="./images/logos/03_Logo_RiverPark.png" alt="" srcset="">
+                                </div>                        
+                            </div>
+
+                    
+                            <!-- Thumbs -->
+                            <div class="row g-5 thumbs-wrapper" style="text-align: center;">
+
+                                <!--1ra Fila-->
+
+                                <div  class="col-4 thumb" onclick="playVideo('./videos/03_River-ATV Jorullo Bridge.mp4')">
+                                    <img src="./images/thumbs/02_River-02_ATV.png" alt="" srcset="">
+                                </div>
+                                <div  class="col-4 thumb" onclick="playVideo('./videos/03_River-ATV Jorullo Point.mp4')">
+                                    <img src="./images/thumbs/02_River-03_ATV-Jorullo-point.png" alt="" srcset="">
+                                </div>     
+                                <div class="col-4 thumb" onclick="playVideo('./videos/03_River-Hiking Jorullo Point.mp4')">
+                                    <img src="./images/thumbs/02_River-01_Hiking-Jorullo.png" alt="" srcset="">
+                                </div>  
+
+                                <!--2da Fila-->
+
+                                <div  class="col-4 thumb" onclick="playVideo('./videos/03_River-Horseback Riding.mp4')">
+                                    <img src="./images/thumbs/02_River-04_Horseback.png" alt="" srcset="">
+                                </div>
+                                <div  class="col-4 thumb" onclick="playVideo('./videos/03_River-Jorullo Bridge RZR.mp4')">
+                                    <img src="./images/thumbs/02_River-05_RZR.png" alt="" srcset="">
+                                </div>     
+                                <div class="col-4 thumb" onclick="playVideo('./videos/03_River-Jorullo Point RZR.mp4')">
+                                    <img src="./images/thumbs/02_River-06_Jorullo-RZR.png" alt="" srcset="">
+                                </div>  
+
+                                <!--3ra Fila-->
+                                <div class="col-4 thumb ultima-fila">
+                                </div>  
+                                <div  class="col-4 thumb ultima-fila" onclick="playVideo('./videos/03_River-Zipline + Mules.mp4')">
+                                    <img src="./images/thumbs/02_River-07_Zipline-Mules.png" alt="" srcset="">
+                                </div>     
+                                <div class="col-4 thumb ultima-fila">
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+                
+                <!-- ============================================
+                PAGE: MARINA
+                ============================================ -->
+
+                <div class="page-marina no-visible-cm">
+                    
+                    <!-- Contenedor Izquierdo -->
+                    <div class="">
+
+                        <div class="container d-flex justify-content-center">
+
+                            <!-- Logo -->
+                            <div class="row">
+                                <div class="col-12 py-5">
+                                    <img src="./images/logos/04_Logo_MarinaVallarta.png" alt="" srcset="">
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================
+                PAGE: VISTA
+                ============================================ -->
+
+                <div class="page-vista no-visible-cm">
+                    
+                    <!-- Contenedor Izquierdo -->
+                    <div class="">
+
+                        <div class="container d-flex justify-content-center">
+
+                            <!-- Logo -->
+                            <div class="row">
+                                <div class="col-12 py-5">
+                                    <img src="./images/logos/05_Logo_VistaVallarta.png" alt="" srcset="">
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================
+                PAGE: PIRATES
+                ============================================ -->
+
+                <div class="page-pirates no-visible-cm">
+                    
+                    <!-- Contenedor Izquierdo -->
+                    <div class="">
+
+                        <div class="container-fluid ">
+
+                            <!-- Logo -->
+                            <div class="row" style="text-align: center;">
+                                <div class="col-12 py-5">
+                                    <img src="./images/logos/06_Logo_Pirate.png" alt="" srcset="">
+                                </div>                        
+                            </div>
+
+                            <!-- Thumbs -->
+                            <div class="row g-5 thumbs-wrapper" style="text-align: center;">
+
+                                <!--1ra Fila-->
+
+                                <div  class="col-6 thumb" onclick="playVideo('./videos/06_Pirates-Tour-Dia.mp4')">
+                                    <img src="./images/thumbs/03_Pirates-01_Pirate-Island.png" alt="" srcset="">
+                                </div>
+                                <div  class="col-6 thumb" onclick="playVideo('./videos/06_Pirates-Tour-Noche.mp4')">
+                                    <img src="./images/thumbs/03_Pirates-02_PirateBay.png" alt="" srcset="">
+                                </div>     
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+
+                <!-- ============================================
+                PAGE: PADDLE
+                ============================================ -->
+
+                <div class="page-paddle no-visible-cm">
+                    
+                    <!-- Contenedor Izquierdo -->
+                    <div class="">
+
+                        <div class="container-fluid ">
+
+                            <!-- Logo -->
+                            <div class="row" style="text-align: center;">
+                                <div class="col-12 py-5">
+                                    <img src="./images/logos/07_Logo_PaddleZone.png" alt="" srcset="">
+                                </div>                        
+                            </div>
+
+                    
+                            <!-- Thumbs -->
+                            <div class="row g-5 thumbs-wrapper" style="text-align: center;">
+
+                                <!--1ra Fila-->
+
+                                <div  class="col-6 thumb" onclick="playVideo('./videos/07_Paddle-Sunrise Session.m4v')">
+                                    <img src="./images/thumbs/04_Paddle-01_PaddleSunrise.png" alt="" srcset="">
+                                </div>
+                                <div  class="col-6 thumb" onclick="playVideo('./videos/07_Paddlesunset Bioluminescence.m4v')">
+                                    <img src="./images/thumbs/04_Paddle-02_PaddleSunset.png" alt="" srcset="">
+                                </div>     
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+
+
+                <!-- ============================================
+                PAGE: GABYS
+                ============================================ -->
+
+                <div class="page-gabys no-visible-cm">
+                    
+                    <!-- Contenedor Izquierdo -->
+                    <div class="">
+
+                        <div class="container d-flex justify-content-center">
+
+                            <!-- Logo -->
+                            <div class="row">
+                                <div class="col-12 py-5">
+                                    <img src="./images/logos/08_Logo_Gabys.png" alt="" srcset="">
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================
+                PAGE: Tours and Transfers
+                ============================================ -->
+
+                <div class="page-tb no-visible-cm">
+                    
+                    <!-- Contenedor Izquierdo -->
+                    <div class="">
+
+                        <div class="container-fluid ">
+
+                            <!-- Logo -->
+                            <div class="row" style="text-align: center;">
+                                <div class="col-12 py-5">
+                                    <img src="./images/logos/09_Logo_TBtours.png" alt="" srcset="">
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+
+                <!-- ============================================
+                PAGE: ADVENTURES
+                ============================================ -->
+
+                <div class="page-adventures no-visible-cm">
+                    
+                    <!-- Contenedor Izquierdo -->
+                    <div class="">
+
+                        <div class="container-fluid">
+
+                            <!-- Logo -->
+                            <div class="row" style="text-align: center;">
+                                <div class="col-12 py-5">
+                                    <img src="./images/logos/10_Logo_VallartaAdv.png" alt="" srcset="">
+                                </div>                        
+                            </div>
+                            
+                            <!-- Thumbs -->
+                            <div class="row g-5 thumbs-wrapper" style="text-align: center;">
+
+                                <!--1ra Fila-->
+
+                                <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-01 All Terrain Safari.mp4')">
+                                    <img src="./images/thumbs/05_Activities-01_All-Terrain-Safari.png" alt="" srcset="">
+                                </div>
+                                <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-02 Alma-Premier Gastronomic Journey.mp4')">
+                                    <img src="./images/thumbs/05_Activities-02_Alma-Premier.png" alt="" srcset="">
+                                </div>     
+                                <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-03 Majahuitas Beach Day-Promo.mp4')">
+                                    <img src="./images/thumbs/05_Activities-03_Majahuitas.png" alt="" srcset="">
+                                </div>  
+                                <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-04 Dolphin Experiences-2025.mp4')">
+                                    <img src="./images/thumbs/05_Activities-04_Dolphin.png" alt="" srcset="">
+                                </div>  
+
+                                <!--2da Fila-->
+
+                                <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-05 Extreme_2020.mp4')">
+                                    <img src="./images/thumbs/05_Activities-05_Extreme.png" alt="" srcset="">
+                                </div>
+                                <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-06 Island Discovery.mp4')">
+                                    <img src="./images/thumbs/05_Activities-06_Island-Discovery.png" alt="" srcset="">
+                                </div>     
+                                <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-07 - Alma - Ritmos de la Noche.mp4')">
+                                    <img src="./images/thumbs/05_Activities-07_Alma-Rhythms.png" alt="" srcset="">
+                                </div>  
+                                <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-08 Las Caletas 2026.mp4')">
+                                    <img src="./images/thumbs/05_Activities-08_Las-Caletas.png" alt="" srcset="">
+                                </div>
+
+                                <!--3ra Fila-->
+
+                                <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-09 Luxury sailing.mp4')">
+                                    <img src="./images/thumbs/05_Activities-09_Sailing.png" alt="" srcset="">
+                                </div>
+                                <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-10 Luxury Snorkeling.mp4')">
+                                    <img src="./images/thumbs/05_Activities-10_Snorkeling.png" alt="" srcset="">
+                                </div>     
+                                <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-11 Majahuitas Music Festival.mp4')">
+                                    <img src="./images/thumbs/05_Activities-11_Majahuitas-Festival.png" alt="" srcset="">
+                                </div>  
+                                <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-12 MARIETAS ISLANDS & BEACH BBQ.mp4')">
+                                    <img src="./images/thumbs/05_Activities-12_Marietas.png" alt="" srcset="">
+                                </div>  
+
+                                <!--4ta Fila-->
+
+                                <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-13 Outdoor_adventure.mp4')">
+                                    <img src="./images/thumbs/05_Activities-13_Outdoor.png" alt="" srcset="">
+                                </div>
+                                <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-14 San Sebastian del Oeste - Promocional.mp4')">
+                                    <img src="./images/thumbs/05_Activities-14_SanSebastian.png" alt="" srcset="">
+                                </div>     
+                                <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-15 Sayulita San Pancho.mp4')">
+                                    <img src="./images/thumbs/05_Activities-15_Sayulita.png" alt="" srcset="">
+                                </div>  
+                                <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-16 Scuba.mp4')">
+                                    <img src="./images/thumbs/05_Activities-16_Scuba.png" alt="" srcset="">
+                                </div>  
+
+                                <!--5to Fila-->
+
+                                <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-17 Sea Safari 2026.mp4')">
+                                    <img src="./images/thumbs/05_Activities-17_SeaSafari.png" alt="" srcset="">
+                                </div>
+                                <div  class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-18 Sunset Sailing.mp4')">
+                                    <img src="./images/thumbs/05_Activities-18_Sunset.png" alt="" srcset="">
+                                </div>     
+                                <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-19 Whale Watching Adventure.mp4')">
+                                    <img src="./images/thumbs/05_Activities-19_Whale.png" alt="" srcset="">
+                                </div>  
+                                <div class="col-3 thumb" onclick="playVideo('./videos/10_Adventures-20 Whale Watching Photo Safari.mp4')">
+                                    <img src="./images/thumbs/05_Activities-20_Whale.png" alt="" srcset="">
+                                </div>  
+
+                                <!--6to Fila-->
+
+                                <div class="col-4 thumb ultima-fila">
+                                </div>  
+
+                                <div  class="col-4 thumb ultima-fila" onclick="playVideo('./videos/10_Adventures-21 Yelapa&MajahuitasBeachBBQ.mp4')">
+                                    <img src="./images/thumbs/05_Activities-21_Yelapa.png" alt="" srcset="">
+                                </div>
+
+                                <div class="col-4 thumb ultima-fila">
+                                </div>  
+    
+
+
+
+                            </div>
+                        
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- FIN DE LOS PAGES -->
-    </section>
+            <!-- FIN DE LOS PAGES -->
+        </section>        
+    </div>
+
+ 
 </body>
 
 

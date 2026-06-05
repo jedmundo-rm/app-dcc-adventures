@@ -1,5 +1,6 @@
+@charset "UTF-8";
 /* Pages */
-body {
+html, body {
   -webkit-user-select: none;
   background-image: url("../images/home/Bkg.jpg");
   background-size: auto;
@@ -7,11 +8,28 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  position: fixed; /* Obliga a iOS a congelar el fondo */
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
 }
 @media (min-width: 1367px) {
-  body {
+  html, body {
     background-size: cover;
   }
+}
+html, body {
+  /* Este contenedor absorbe el tamaño real de la pantalla de tu iPad */
+}
+html #app-wrapper, body #app-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden !important;
+  -webkit-overflow-scrolling: auto; /* Desactiva el rebote elástico de Safari */
 }
 
 #screen {
