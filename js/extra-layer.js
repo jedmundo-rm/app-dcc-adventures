@@ -3,7 +3,9 @@
     $(document).ready(function() {
 
 
-        $('#logo').click(function(){
+        $('#logo').on('click touchstart', function(e) {
+            // Evita que el evento se dispare dos veces en algunos dispositivos
+            e.preventDefault();
             $("#screen").removeClass('active');
         });
 
