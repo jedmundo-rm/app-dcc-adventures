@@ -5,7 +5,12 @@ body {
     background-image: url("../images/home/Bkg.jpg"); 
     background-size: auto;
     background-repeat: no-repeat;
+
+    width: 100%;
+    height: 100%;
     overflow: hidden;
+
+
     // esta es la resolucion que vamos a usar
     @media(min-width: 1367px){
         background-size: cover;
@@ -197,7 +202,7 @@ body {
 }
 
 // --- Clases Compartidas (Extra Sections) ---
- .page-adventures {
+.page-veranos, .page-pirates, .page-paddle, .page-tb, .page-adventures {
   overflow: scroll;
 
   width: 100%;
@@ -211,7 +216,7 @@ body {
 
 .page-veranos{
     .thumbs-wrapper{
-        padding: 4rem 14rem;
+        padding: 4rem 10rem;
         // esta es la resolucion que vamos a usar
         @media(min-width: 1367px){
             padding: 14rem 20rem;
