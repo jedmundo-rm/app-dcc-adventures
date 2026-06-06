@@ -6,10 +6,9 @@ html, body {
     background-size: auto;
     background-repeat: no-repeat;
 
+
     width: 100%;
-    /* Usa dvh (Dynamic Viewport Height) para navegadores modernos */
-    height: 100dvh;
-    
+    height: 100%;
     overflow: hidden;
     position: fixed; /* Obliga a iOS a congelar el fondo */
     top: 0;
@@ -26,10 +25,7 @@ html, body {
     /* Este contenedor absorbe el tamaño real de la pantalla de tu iPad */
     #app-wrapper {
         width: 100vw;
-        /* El truco maestro: */
-        /* Le dice al iPad que mida el alto total de la pantalla y le sume el espacio del área segura inferior */
-        height: calc(100vh + env(safe-area-inset-bottom));
-
+        height: 100vh;
         position: absolute;
         top: 0;
         left: 0;
