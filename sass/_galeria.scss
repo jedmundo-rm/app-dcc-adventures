@@ -41,6 +41,10 @@
           border: 6px solid rgba(182, 160, 111, 1);
           border-radius: 32px;
 
+          /* El truco: Fuerza la proporción para que el borde y el video encajen siempre. */
+          /* Ejemplos comunes: 16/9 (panorámico), 4/3 (cuadrado antiguo/iPad), 1/1 (cuadrado) */
+          aspect-ratio: 16 / 9;
+
           /* El truco para iOS: */
           object-fit: contain;    /* Asegura que el contenido se ajuste al tag */
       }      
