@@ -25,10 +25,14 @@ html, body {
     /* Este contenedor absorbe el tamaño real de la pantalla de tu iPad */
     #app-wrapper {
         width: 100vw;
-        height: 100vh;
+        height: 101vh;
         position: absolute;
+
         top: 0;
         left: 0;
+        right: 0;
+        bottom: 0; /* Al poner top, left, right y bottom en 0, obligas a estirarse sí o sí */
+        
         overflow: hidden !important;
         -webkit-overflow-scrolling: auto; /* Desactiva el rebote elástico de Safari */
     }
