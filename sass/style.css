@@ -260,12 +260,23 @@ html #app-wrapper, body #app-wrapper {
   background-color: #fff;
   border: 6px solid rgb(182, 160, 111);
   border-radius: 32px;
-  /* El truco: Fuerza la proporción para que el borde y el video encajen siempre. */
-  /* Ejemplos comunes: 16/9 (panorámico), 4/3 (cuadrado antiguo/iPad), 1/1 (cuadrado) */
+  /* Clase para videos horizontales tradicionales (16:9) */
+}
+#videoPlayerContainer .video-wrapper #mainVideo.horizontal {
   aspect-ratio: 16/9;
-  /* El truco para iOS: */
   -o-object-fit: contain;
-     object-fit: contain; /* Asegura que el contenido se ajuste al tag */
+     object-fit: contain;
+}
+#videoPlayerContainer .video-wrapper #mainVideo {
+  /* Clase para videos verticales (9:16) tipo Shorts/Reels */
+}
+#videoPlayerContainer .video-wrapper #mainVideo.vertical {
+  /* Ajusta este porcentaje según qué tan alto quieras que se vea en el iPad */
+  max-height: 70vh;
+  aspect-ratio: 9/16;
+  -o-object-fit: contain;
+     object-fit: contain; /* Cambia a 'cover' si quieres que llene todo el ancho */
+  margin: 0 auto; /* Lo centra horizontalmente si es más angosto */
 }
 
 .hidden {

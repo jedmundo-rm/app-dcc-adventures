@@ -40,7 +40,30 @@
             $("#screen").addClass('active');
         }
 
+        $('#mainVideo').each(function() {
+            var videoElement = this;
 
+            // Escuchamos cuando los datos del video estén listos en el iPad
+            videoElement.addEventListener('loadedmetadata', function() {
+                var anchoNativo = this.videoWidth;
+                var altoNativo = this.videoHeight;
+
+                // Limpiamos clases por si acaso
+                $(videoElement).removeClass('horizontal vertical');
+
+                // Evaluamos la orientación
+                if (altoNativo > anchoNativo) {
+                    // Es un video vertical (9:16)
+                    $(videoElement).addClass('vertical');
+                } else {
+                    // Es un video horizontal (16:9 o 4:3)
+                    $(videoElement).addClass('horizontal');
+                }
+
+                // Forzamos un redibujado rápido en Safari para asegurar el cambio
+                $(videoElement).hide().show(0);
+            });
+        });
 
         const extraLayer = {
 
