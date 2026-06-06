@@ -239,6 +239,8 @@ html #app-wrapper, body #app-wrapper {
   /* El truco para iPad y Safari: */
   /* Regla estándar para el resto de navegadores */
   backdrop-filter: blur(10px);
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
   display: flex;
   flex-direction: column;
   justify-content: center;
