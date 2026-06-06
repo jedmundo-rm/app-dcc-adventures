@@ -50,12 +50,6 @@
             // Escuchamos cuando los datos del video estén listos en el iPad
             videoElement.addEventListener('loadedmetadata', function() {
 
-
-            // Forzamos un sutil redibujado. Cambiar el estilo y volverlo a poner
-            // a menudo arregla los bugs de renderizado de Safari.
-            $(videoElement).css('height', 'auto');
-            $(videoElement).hide().show(0); // Forzar un reflow (redibujado)
-
                 var anchoNativo = this.videoWidth;
                 var altoNativo = this.videoHeight;
 
