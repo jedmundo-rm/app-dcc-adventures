@@ -9,7 +9,6 @@
     height: 100%;
     background: rgba(255, 255, 255, 0.5);
 
-    backdrop-filter: blur(10px);
     /* El truco para iPad y Safari: */
     -webkit-backdrop-filter: blur(10px); 
     /* Regla estándar para el resto de navegadores */
