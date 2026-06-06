@@ -24,7 +24,7 @@ html, body {
 }
 html #app-wrapper, body #app-wrapper {
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   position: absolute;
   top: 0;
   left: 0;
