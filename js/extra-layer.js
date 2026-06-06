@@ -40,6 +40,10 @@
             $("#screen").addClass('active');
         }
 
+        //============================================
+        // FUNCION PARA SWICHEAR EL CONTENEDOR DEL VIDEO EN HORIZONTAL Y VERTICAL
+        //============================================
+
         $('#mainVideo').each(function() {
             var videoElement = this;
 

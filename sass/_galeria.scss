@@ -51,7 +51,7 @@
           /* Clase para videos verticales (9:16) tipo Shorts/Reels */
           &.vertical {
               /* Ajusta este porcentaje según qué tan alto quieras que se vea en el iPad */
-              max-height: 80vh; 
+            
               aspect-ratio: 9 / 16;
               object-fit: contain; /* Cambia a 'cover' si quieres que llene todo el ancho */
               margin: 0 auto;      /* Lo centra horizontalmente si es más angosto */
