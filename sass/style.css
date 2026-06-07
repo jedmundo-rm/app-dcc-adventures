@@ -9,7 +9,7 @@ html, body {
   height: 105%;
   overflow: hidden;
   position: fixed; /* Obliga a iOS a congelar el fondo */
-  bottom: 0;
+  top: 50;
   left: 0;
   margin: 0;
   padding: 0;
