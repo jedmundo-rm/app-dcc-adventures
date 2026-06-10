@@ -2,6 +2,7 @@
 /* Pages */
 html, body {
   -webkit-user-select: none;
+  background-color: #000;
   background-image: url("../images/home/Bkg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -9,7 +10,7 @@ html, body {
   height: 105%;
   overflow: hidden;
   position: fixed; /* Obliga a iOS a congelar el fondo */
-  top: 50;
+  top: 0;
   left: 0;
   margin: 0;
   padding: 0;
