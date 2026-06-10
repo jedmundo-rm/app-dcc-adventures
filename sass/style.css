@@ -2,7 +2,7 @@
 /* Pages */
 html, body {
   -webkit-user-select: none;
-  background-color: #000;
+  background-color: #000 !important;
   background-image: url("../images/home/Bkg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
