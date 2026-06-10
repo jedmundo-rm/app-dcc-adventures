@@ -27,12 +27,43 @@ html #app-wrapper, body #app-wrapper {
   width: 100vw;
   height: 100vh;
   position: absolute;
+  display: block;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; /* Al poner top, left, right y bottom en 0, obligas a estirarse sí o sí */
   overflow: hidden !important;
   -webkit-overflow-scrolling: auto; /* Desactiva el rebote elástico de Safari */
+}
+html, body {
+  /* Este es el cartel de aviso (oculto por defecto) */
+}
+html #rotate-warning, body #rotate-warning {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #121212; /* Color de fondo */
+  color: white;
+  z-index: 9999; /* Asegura que esté por encima de todo */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+html, body {
+  /* EL TRUCO: Si la pantalla está en vertical (Portrait) */
+}
+@media screen and (orientation: portrait) {
+  html #rotate-warning, body #rotate-warning {
+    display: flex; /* Muestra el aviso */
+  }
+  html #app-wrapper, body #app-wrapper {
+    display: none; /* Esconde tu app para que no interactúen mal */
+  }
 }
 
 #screen {

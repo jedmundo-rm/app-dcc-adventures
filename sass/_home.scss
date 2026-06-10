@@ -28,6 +28,7 @@ html, body {
         width: 100vw;
         height: 100vh;
         position: absolute;
+        display: block;
 
         top: 0;
         left: 0;
@@ -36,6 +37,35 @@ html, body {
         
         overflow: hidden !important;
         -webkit-overflow-scrolling: auto; /* Desactiva el rebote elástico de Safari */
+    }
+
+
+    /* Este es el cartel de aviso (oculto por defecto) */
+    #rotate-warning {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #121212; /* Color de fondo */
+        color: white;
+        z-index: 9999; /* Asegura que esté por encima de todo */
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: sans-serif;
+    }
+
+    /* EL TRUCO: Si la pantalla está en vertical (Portrait) */
+    @media screen and (orientation: portrait) {
+        #rotate-warning {
+            display: flex; /* Muestra el aviso */
+        }
+        #app-wrapper {
+            display: none; /* Esconde tu app para que no interactúen mal */
+        }
     }
 }
 
