@@ -1,17 +1,21 @@
 
 #videoPlayerContainer {
   
-  @include aplicarTransicion(0.8s, 0s);
+  @include aplicarTransicion(0.5s, 0s);
 
     position: fixed;
     top:0%;
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.5);
 
-    max-width: 1948px;
-    max-height: 1108px;
-  
+    /* El truco para iPad y Safari: */
+    -webkit-backdrop-filter: blur(10px); 
+    /* Regla estándar para el resto de navegadores */
+    backdrop-filter: blur(10px);
+    transform: translateZ(0);
+-webkit-transform: translateZ(0);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,15 +24,43 @@
 
     // esta es la resolucion que vamos a usar
     @media(min-width: 1367px){
-        top:22%;
+  
     }
 
-    #mainVideo {
-      width: 100%;
-      height: 100%;
-      border: 12px solid rgba(182, 160, 111, 1);
-      border-radius: 24px;
-  }
+    .video-wrapper{
+      position: relative;
+      display: flex;
+      align-items: center;
+
+        #mainVideo {
+          width: 100%;            /* Se adapta al ancho del contenedor padre */
+          max-width: 1072px;      /* El ancho máximo de tu iPad Pro */
+          height: auto;           /* Controles de altura automáticos basados en el video */
+          display: block;         /* Elimina espacios fantasma debajo del video */
+          background-color: #fff;
+          border: 6px solid rgba(182, 160, 111, 1);
+          border-radius: 32px;
+
+
+          /* Clase para videos horizontales tradicionales (16:9) */
+          &.horizontal {
+              aspect-ratio: 16 / 9;
+              object-fit: contain;
+          }
+
+          /* Clase para videos verticales (9:16) tipo Shorts/Reels */
+          &.vertical {
+              /* Ajusta este porcentaje según qué tan alto quieras que se vea en el iPad */
+              max-height: 90vh; 
+              width: auto;
+              aspect-ratio: 9 / 16;
+              object-fit: contain; /* Cambia a 'cover' si quieres que llene todo el ancho */
+              margin: 0 auto;      /* Lo centra horizontalmente si es más angosto */
+          }
+      }      
+    }
+
+
 
 }
 
@@ -41,16 +73,16 @@
 
 .close-btn-video {
     position: absolute;
-    top: 0px;
+    top:0px;
     right: 5px;
     padding: 10px 20px;
-    background: #B6A06F;
+    background: #B6A06F !important;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 32px;
     font-size: 24px;
       // esta es la resolucion que vamos a usar
     @media(min-width: 1367px){
-        top: -80px;
+        top: 0px;
     }
 }

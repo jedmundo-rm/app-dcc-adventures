@@ -1,14 +1,71 @@
 
 
-body { 
+html, body { 
     -webkit-user-select: none;
+    background-color: #000 !important;
     background-image: url("../images/home/Bkg.jpg"); 
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
+
+
+    width: 100%;
+    height: 100%;
     overflow: hidden;
+    position: fixed; /* Obliga a iOS a congelar el fondo */
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+
+
     // esta es la resolucion que vamos a usar
     @media(min-width: 1367px){
         background-size: cover;
+    }
+
+    /* Este contenedor absorbe el tamaño real de la pantalla de tu iPad */
+    #app-wrapper {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        display: block;
+
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; /* Al poner top, left, right y bottom en 0, obligas a estirarse sí o sí */
+        
+        overflow: hidden !important;
+        -webkit-overflow-scrolling: auto; /* Desactiva el rebote elástico de Safari */
+    }
+
+
+    /* Este es el cartel de aviso (oculto por defecto) */
+    #rotate-warning {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #121212; /* Color de fondo */
+        color: white;
+        z-index: 9999; /* Asegura que esté por encima de todo */
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: sans-serif;
+    }
+
+    /* EL TRUCO: Si la pantalla está en vertical (Portrait) */
+    @media screen and (orientation: portrait) {
+        #rotate-warning {
+            display: flex; /* Muestra el aviso */
+        }
+        #app-wrapper {
+            display: none; /* Esconde tu app para que no interactúen mal */
+        }
     }
 }
 
@@ -122,23 +179,32 @@ body {
   font-weight: 300;
 
 
-  button.extra-close-btn {
-      border: 1px solid transparent;
-      background: transparent;
-      position: absolute;
-      z-index: 5000;
-      left: -150px;
-      width: 135px;
-      top: 36px;
-      cursor: pointer;
+  button{
 
-      &:focus { 
-        outline: 0 solid blue; 
-    }
+    border: 1px solid transparent;
+    background: transparent;
+    position: absolute;
+    z-index: 5000;
+    width: 110px;
+    cursor: pointer;
 
-      img { 
+    img { 
         width: 100%; 
         float: left; 
+    }
+
+    // Ponemos la posicion de lso botones de forma que esten no visibles
+    &.extra-close-btn {
+        left: -150px;
+        top: 36px;     
+    }
+    &.extra-back-btn{
+        right: -150px;
+        top: 36px;
+    }
+    &.extra-forward-btn{
+        right: -150px;
+        top: 36px;
     }
   }
 
@@ -164,6 +230,14 @@ body {
 }
 
 .row{
+    &.logo-section{
+        img{
+            width: 50%;
+            margin: 0 auto;
+            display: block;       
+        }
+
+    }
     &.thumbs-wrapper{
         .thumb{
             &.tercera-fila{
@@ -197,15 +271,14 @@ body {
   top: 0;
   left: 0;
   box-sizing: border-box;
-  padding: 40px;
 }
 
 .page-veranos{
     .thumbs-wrapper{
-        padding: 4rem 6rem;
+        padding: 0rem 10rem;
         // esta es la resolucion que vamos a usar
         @media(min-width: 1367px){
-            padding: 14rem 20rem;
+            padding: 6rem 20rem;
         } 
     }        
 }
@@ -230,30 +303,12 @@ body {
     }        
 }
 
-.page-tb{
-    .thumbs-wrapper{
-        .ultima-fila{
-            padding: 0rem 4rem;
-            // esta es la resolucion que vamos a usar
-            @media(min-width: 1367px){
-                padding: 0;
-            } 
-        }
-
-    }   
-}
-
-.page-adventures{
-    .thumbs-wrapper{
-        .ultima-fila{
-            padding: 0rem 31rem;
-            // esta es la resolucion que vamos a usar
-            @media(min-width: 1367px){
-                padding: 0;
-            } 
-        }
-
-    }   
+.ultima-fila{
+    padding: 0rem 4rem;
+    // esta es la resolucion que vamos a usar
+    @media(min-width: 1367px){
+        padding: 0;
+    } 
 }
 
 .no-visible-cm { display: none !important; }
